@@ -1,4 +1,4 @@
-# whatsmy
+# WhatsMy
 
 ## Project setup
 ```
