@@ -1,0 +1,53 @@
+body {
+    @include set-font(primary);
+    font-size: $global-font-size;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    @include set-font(primary, bold);
+    font-size: 3.5rem;
+    line-height: 4rem;
+}
+
+h2 {
+    @include set-font(primary, medium);
+    font-size: 2.375rem;
+    line-height: 3.125rem;
+}
+
+h3, h4, h5, h6 {
+    @include set-font(primary, medium);
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: $body-font-size;
+    line-height: 1.5;
+}
+
+.leadText {
+    @include set-font(secondary);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.subtitle {
+    @include set-font(primary, semi-bold);
+    font-size: $body-font-size;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    margin-bottom: 2.5rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}

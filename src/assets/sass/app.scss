@@ -1,11 +1,15 @@
 @charset 'UTF-8';
 
+// Normalize
+@import
+'base/normalize';
+
 //Vendors Styles
 
 //Base Styles
 @import
 'base/colors',
-'base/typography',
+'base/fonts',
 'base/variables';
 
 //Helper Styles
@@ -15,6 +19,7 @@
 
 //Modules
 @import
+'modules/typography',
 'modules/buttons';
 
 //Component Styles
