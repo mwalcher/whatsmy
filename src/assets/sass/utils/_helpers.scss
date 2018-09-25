@@ -1,0 +1,25 @@
+/* Utilities */
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+/* Gradients */
+.yellow-gradient {
+    @include gradient($orange, $yellow);
+}
+
+.pink-gradient {
+    @include gradient($red, $pink);
+}
+
+.blue-gradient {
+    @include gradient($throwback-blue, $sky-blue);
+}
+
+.dark-gradient {
+    @include gradient($deep-blue, $ocean-blue);
+}

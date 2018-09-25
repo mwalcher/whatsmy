@@ -1,9 +1,22 @@
-body {
-    margin: 0;
+@charset 'UTF-8';
 
-    .logo {
-        display: block;
-        width: 100%;
-        max-width: 9.25rem;
-    }
-}
+//Vendors Styles
+
+//Base Styles
+@import
+'base/colors',
+'base/typography',
+'base/variables';
+
+//Helper Styles
+@import
+'utils/mixins',
+'utils/helpers';
+
+//Modules
+@import
+'modules/buttons';
+
+//Component Styles
+
+//Pages Styles
