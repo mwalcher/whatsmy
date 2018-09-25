@@ -18,3 +18,16 @@
     font-family: map-get($font, font-family);
     font-weight: map-get($font, font-weight);
 }
+
+@mixin spacing($property-name, $position, $value){
+    @if($position == all){
+        #{$property-name}: $value;
+    }
+    @else{
+        $positions: $position;
+        @each $multiplePosition in $positions {
+            $property: #{$property-name}-#{$multiplePosition};
+            #{$property}: $value;
+        }
+    }
+}

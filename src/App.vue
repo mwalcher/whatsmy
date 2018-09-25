@@ -1,11 +1,16 @@
 <template>
     <div id="app">
-        <img src="./assets/images/whatsmy-logo.svg" alt="WhatsMy Logo">
+        <Header/>
     </div>
 </template>
 
 <script>
+import Header from './components/Header.vue'
+
 export default {
-    name: 'app'
+    name: 'app',
+    components: {
+        Header
+    }
 }
 </script>
