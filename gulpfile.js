@@ -1,13 +1,12 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var sassFiles = 'src/assets/sass/*.scss';
 
 gulp.task('default', ['compile'], () => {
-    gulp.watch(sassFiles, ['compile']);
+    gulp.watch('src/assets/sass/**/*.scss', ['compile']);
 });
 
 gulp.task('compile', function() {
-    gulp.src(sassFiles)
+    gulp.src('src/assets/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./public/css/'));
 });
