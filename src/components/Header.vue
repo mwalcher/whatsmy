@@ -1,7 +1,9 @@
 <template>
     <header>
         <div class="container">
-            <img class="logo" src="../assets/images/whatsmy-logo.svg" alt="WhatsMy Logo">
+            <router-link to="/" title="Home">
+                <img class="logo" src="../assets/images/whatsmy-logo.svg" alt="WhatsMy Logo">
+            </router-link>
             <button id="menuToggle">
                 <span class="menuLabel">Menu</span>
                 <span class="menuIcon">

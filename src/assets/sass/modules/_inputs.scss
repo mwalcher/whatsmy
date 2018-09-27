@@ -1,0 +1,26 @@
+input:not([type="submit"]),
+textarea,
+select{
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+
+    color: $input-colour;
+    background-color: $input-background;
+
+    @include set-font(primary);
+    font-size: $body-font-size;
+    line-height: 1.5rem;
+    padding: 0.8125rem;
+    width: 100%;
+
+    &::placeholder {
+        color: rgba($input-colour, 0.5);
+    }
+}
+
+textarea{
+    resize: vertical;
+    min-height: 8.75rem;
+    max-height: 14rem;
+}

@@ -1,32 +1,32 @@
-%button {
-    display: inline-block;
-    padding: 0.5rem 1.875rem;
-    border-radius: 1.25rem;
-    cursor: pointer;
-
+%button-reset {
+    appearance: none;
     @include set-font(primary);
-    font-size: $body-font-size;
-    line-height: 1.5rem;
-    text-align: center;
     text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
 
     &:hover, &:focus, &:active{
         outline: none;
     }
 }
 
-button {
-    appearance: none;
-    background-color: transparent;
-    cursor: pointer;
+%button-base {
+    @extend %button-reset;
+    display: inline-block;
+    padding: 0.5rem 1.875rem;
+    border-radius: 1.25rem;
 
-    &:focus {
-        outline: none;
-    }
+    font-size: $body-font-size;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+button {
+    @extend %button-reset;
 }
 
 .button {
-    @extend %button;
+    @extend %button-base;
     color: $white;
     background-color: $primary-colour;
 }

@@ -5,6 +5,10 @@
                 <div class="cta-container">
                     <form>
                         <p class="cta-title">Wondering what your home or vehicle is worth?</p>
+                        <div class="micro-form">
+                            <input type="email" placeholder="Enter your email address" />
+                            <input type="submit" value="Sign Up" />
+                        </div>
                     </form>
                 </div>
                 <div class="footer-legal">
