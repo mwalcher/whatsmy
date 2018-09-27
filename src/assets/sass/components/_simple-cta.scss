@@ -1,0 +1,9 @@
+.simple-cta {
+    text-align: center;
+    @include spacing(padding, top bottom, 6.875rem);
+
+    h2 {
+        color: $red;
+        margin-bottom: 1.5rem;
+    }
+}

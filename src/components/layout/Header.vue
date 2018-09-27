@@ -2,7 +2,7 @@
     <header>
         <div class="container">
             <router-link to="/" title="Home">
-                <img class="logo" src="../assets/images/whatsmy-logo.svg" alt="WhatsMy Logo">
+                <img class="logo" src="../../assets/images/whatsmy-logo.svg" alt="WhatsMy Logo">
             </router-link>
             <button id="menuToggle">
                 <span class="menuLabel">Menu</span>
