@@ -35,6 +35,8 @@ footer {
                     display: flex;
 
                     input:not([type="submit"]) {
+                        flex: 1 1 auto;
+                        width: auto;
                         color: $primary-colour;
                         background-color: $white;
 
