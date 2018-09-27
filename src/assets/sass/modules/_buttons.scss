@@ -15,8 +15,18 @@
     }
 }
 
+button {
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
 .button {
     @extend %button;
     color: $white;
-    background-color: $deep-blue;
+    background-color: $primary-colour;
 }

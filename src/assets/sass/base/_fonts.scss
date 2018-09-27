@@ -1,5 +1,6 @@
 $primary-font   : 'Archivo', sans-serif;
 $secondary-font : 'Lora', serif;
+$tertiary-font: 'Cairo', sans-serif;
 
 $font-weight-regular   : 400;
 $font-weight-medium    : 500;
@@ -29,6 +30,12 @@ $fonts : (
         regular : (
             font-family : $secondary-font,
             font-weight : $font-weight-regular
+        )
+    ),
+    tertiary : (
+        semi-bold : (
+            font-family : $tertiary-font,
+            font-weight : $font-weight-semi-bold
         )
     )
 );

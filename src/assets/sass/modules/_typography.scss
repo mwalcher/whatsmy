@@ -1,4 +1,5 @@
 body {
+    color: $primary-colour;
     @include set-font(primary);
     font-size: $global-font-size;
     line-height: 1;
