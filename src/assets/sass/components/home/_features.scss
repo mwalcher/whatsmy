@@ -1,0 +1,52 @@
+.features {
+    position: relative;
+    margin-top: 14.75rem;
+    overflow: hidden;
+
+    .content-container {
+        max-width: 36.25rem;
+
+        h3 {
+            color: $red;
+            @include set-font(primary, bold);
+            margin-bottom: 4.25rem;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            @include spacing(margin, left right, -0.625rem);
+
+            .feature {
+                flex: 1 1 calc(50% - 1.25rem);
+                padding: 2.5rem 1.25rem;
+                margin: 0.625rem;
+                border: 1px solid $grey;
+
+                h4 {
+                    display: flex;
+                    color: $throwback-blue;
+                    margin-bottom: 0.875rem;
+
+                    &::before {
+                        content: '';
+                        flex: 0 0 2rem;
+                        display: block;
+                        width: 2rem;
+                        height: 2rem;
+                        background-color: $light-grey;
+                        margin-top: 0.5rem;
+                        margin-right: 0.875rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .image-container {
+        position: absolute;
+        top: 0;
+        right: -5.5rem;
+        max-width: 25rem;
+    }
+}

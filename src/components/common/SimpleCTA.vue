@@ -1,5 +1,5 @@
 <template>
-    <div class="simple-cta">
+    <section class="simple-cta">
         <div class="container">
             <h2 v-if="title">{{title}}</h2>
             <router-link
@@ -10,7 +10,7 @@
                 {{buttonText}}
             </router-link>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

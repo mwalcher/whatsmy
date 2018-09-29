@@ -1,11 +1,11 @@
 <template>
-    <div class="lead-content">
+    <section class="lead-content">
         <div class="container">
             <div class="content-container">
                 <p class="leadText">{{text}}</p>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

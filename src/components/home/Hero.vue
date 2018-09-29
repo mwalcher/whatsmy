@@ -1,5 +1,5 @@
 <template>
-    <div class="hero">
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="content-container">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>

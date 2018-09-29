@@ -1,5 +1,5 @@
 <template>
-    <div class="use-case">
+    <section class="use-case">
         <div class="container">
             <div class="use-case-content">
                 <div class="image-container">
@@ -20,7 +20,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
