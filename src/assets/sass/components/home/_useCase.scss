@@ -1,0 +1,44 @@
+.use-case {
+    .use-case-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .image-container {
+            flex: 1 1 50%;
+        }
+
+        .content-container {
+            flex: 1 1 50%;
+            padding-left: 5.75rem;
+
+            .option-title {
+                position: relative;
+                color: $black;
+                white-space: nowrap;
+                margin-bottom: 2.5rem;
+
+                .overlap {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translateX(-100%);
+                    padding-right: 0.875rem;
+                }
+
+                button {
+                    color: inherit;
+                    font-size: inherit;
+                    font-weight: inherit;
+                    line-height: inherit;
+                    border-bottom: 0.1875rem solid $yellow;
+
+                    & + span {
+                        padding-left: 0.875rem;
+                    }
+                }
+            }
+        }
+    }
+}
