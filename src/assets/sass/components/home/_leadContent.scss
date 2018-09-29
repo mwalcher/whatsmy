@@ -1,0 +1,15 @@
+.lead-content {
+    @include spacing(padding, top bottom, 5rem);
+
+    .content-container {
+        @include spacing(padding, top bottom, 6.25rem);
+        @include spacing(padding, left right, $container-gutter);
+        border-left: 1px solid $grey;
+
+        p {
+            text-align: center;
+            max-width: 38.75rem;
+            @include spacing(margin, left right, auto);
+        }
+    }
+}
