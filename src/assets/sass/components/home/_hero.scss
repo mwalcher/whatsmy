@@ -1,0 +1,41 @@
+.hero {
+    .hero-content {
+        position: relative;
+        padding-top: 5.25rem;
+
+        .content-container {
+            padding-left: 4.5rem;
+
+            h1 {
+                margin-bottom: 4rem;
+
+                span {
+                    display: block;
+
+                    &:last-child {
+                        color: $red;
+                    }
+                }
+            }
+        }
+
+        .hero-gradient {
+            background: $gradient-blue;
+            height: 15.875rem;
+            margin-top: -1.25rem;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 0;
+            right: 3.25rem;
+            max-width: 18.75rem;
+            box-shadow: 10px 10px 40px -20px rgba($ocean-blue,0.6);
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
