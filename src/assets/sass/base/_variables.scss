@@ -4,7 +4,14 @@ $tablet-breakpoint  : 48rem;  // 768px
 $laptop-breakpoint  : 62rem;  // 992px
 $desktop-breakpoint : 75rem;  // 1200px
 
+/* Container */
+$container-gutter  : 1rem;
+$phone-container   : 33.75rem + (#{$container-gutter} * 2);
+$tablet-container  : 45rem + (#{$container-gutter} * 2);
+$laptop-container  : 60rem + (#{$container-gutter} * 2);
+$desktop-container : 71.25rem + (#{$container-gutter} * 2);
+
 /* Globals */
 $global-font-size: 1rem;
 $body-font-size: 0.875rem;
-$container-gutter: 1rem;
+$header-height: 6.625rem;
