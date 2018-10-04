@@ -28,19 +28,19 @@ export default {
       this.navigationOpen = !this.navigationOpen;
       document.body.classList.toggle("no-scroll");
     },
-    headerTransition: function () {
-        if(window.scrollY > 10 && !this.headerFixed) {
-            this.headerFixed = true;
-        } else if(window.scrollY <= 10 && this.headerFixed){
-            this.headerFixed = false;
-        }
+    headerTransition: function() {
+      if (window.scrollY > 10 && !this.headerFixed) {
+        this.headerFixed = true;
+      } else if (window.scrollY <= 10 && this.headerFixed) {
+        this.headerFixed = false;
+      }
     }
   },
-  created () {
-    window.addEventListener('scroll', this.headerTransition);
+  created() {
+    window.addEventListener("scroll", this.headerTransition);
   },
-  destroyed () {
-    window.removeEventListener('scroll', this.headerTransition);
+  destroyed() {
+    window.removeEventListener("scroll", this.headerTransition);
   }
 };
 </script>
