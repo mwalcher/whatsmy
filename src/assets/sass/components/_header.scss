@@ -8,6 +8,25 @@ header {
     box-shadow: 0 4px 10px 0 rgba($ocean-blue,0.2);
     z-index: 10;
 
+    #app.navigationOpen & {
+        #menuToggle {
+            .menuIcon {
+                span {
+                    top: 50%;
+
+                    &:first-child {
+                        transform: rotate(45deg) translateY(-50%);
+                        margin-left: -1px;
+                    }
+
+                    &:last-child {
+                        transform: rotate(-45deg) translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+
     & + main {
         padding-top: $header-height;
     }
@@ -41,18 +60,28 @@ header {
         }
 
         .menuIcon {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            position: relative;
+            display: block;
             width: 1.25rem;
             height: 0.625rem;
 
             span {
+                position: absolute;
+                left: 0;
                 display: block;
                 background-color: $primary-colour;
                 width: 100%;
                 height: 0.125rem;
+                transition: top 0.3s ease, transform 0.3s ease;
+
+                &:first-child {
+                    top: 0;
+                }
+
+                &:last-child {
+                    top: 100%;
+                    transform: translateY(-100%);
+                }
             }
         }
     }
@@ -90,4 +119,9 @@ header {
             }
         }
     }
+}
+
+#app.navigationOpen {
+    height: 100vh;
+    overflow: hidden;
 }

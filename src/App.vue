@@ -1,6 +1,6 @@
 <template>
-    <div id="app">
-        <Header/>
+    <div id="app" :class="{navigationOpen}">
+        <Header @toggleNavigation="toggleNavigation"/>
         <router-view/>
         <Footer/>
     </div>
@@ -16,6 +16,16 @@ export default {
   components: {
     Header,
     Footer
+  },
+  data() {
+    return {
+      navigationOpen: false
+    };
+  },
+  methods: {
+    toggleNavigation: function() {
+      this.navigationOpen = !this.navigationOpen;
+    }
   }
 };
 </script>

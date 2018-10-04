@@ -4,7 +4,7 @@
             <router-link to="/" title="Home">
                 <img class="logo" :src="require('@/assets/images/whatsmy-logo.svg')" alt="WhatsMy Logo">
             </router-link>
-            <button id="menuToggle">
+            <button id="menuToggle" @click="$emit('toggleNavigation')">
                 <span class="menuLabel">Menu</span>
                 <span class="menuIcon">
                     <span></span>
