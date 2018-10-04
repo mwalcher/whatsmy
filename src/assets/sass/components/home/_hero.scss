@@ -20,7 +20,10 @@
         }
 
         .hero-gradient {
-            background: $gradient-blue;
+            background-image: url('./assets/images/homepage-header.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             height: 15.875rem;
             margin-top: -1.25rem;
         }
