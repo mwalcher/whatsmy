@@ -6,7 +6,7 @@
             buttonLink="/"
             buttonText="Get Started"
             buttonTitle="Get Started"
-            imageSrc="placeholder-hero.png"
+            imageSrc="homepage-hero-cactus.png"
             imageAlt="Hero Image"
         />
         <LeadContent
@@ -18,13 +18,13 @@
             optionsTitleEnd="worth?"
             optionName="house"
             optionContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse eu."
-            imageSrc="placeholder-use-case.png"
+            imageSrc="home.png"
             imageAlt="Use Case Image"
         />
         <Features
             title="Features"
             sectionTitle="With WhatsMy, you never have to guess again."
-            imageSrc="placeholder-hero.png"
+            imageSrc="device-mockup.png"
             imageAlt="Features Image"
             :features="features"
         />
