@@ -4,9 +4,13 @@ header {
     left: 0;
     width: 100%;
     height: $header-height;
-    background-color: $white;
-    box-shadow: 0 4px 10px 0 rgba($ocean-blue,0.2);
     z-index: 10;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &.headerFixed {
+        background-color: $white;
+        box-shadow: 0 4px 10px 0 rgba($ocean-blue,0.2);
+    }
 
     #app.navigationOpen & {
         #menuToggle {
@@ -24,6 +28,10 @@ header {
                     }
                 }
             }
+        }
+
+        .header-container {
+            background-color: $white;
         }
 
         .navigation {
@@ -55,9 +63,9 @@ header {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        background-color: $white;
         @include spacing(padding, top bottom, 1.75rem);
         z-index: 1;
+        transition: background-color 0.5s ease;
     }
 
     .logo {
