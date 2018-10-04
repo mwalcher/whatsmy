@@ -25,6 +25,7 @@ export default {
   methods: {
     toggleNavigation: function() {
       this.navigationOpen = !this.navigationOpen;
+      document.body.classList.toggle('no-scroll');
     }
   }
 };

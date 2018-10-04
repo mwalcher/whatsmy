@@ -55,6 +55,7 @@ header {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        background-color: $white;
         @include spacing(padding, top bottom, 1.75rem);
         z-index: 1;
     }
@@ -114,6 +115,7 @@ header {
         background-color: $white;
         visibility: hidden;
         opacity: 0;
+        overflow: auto;
         transition: opacity 0.5s ease, visibility 0.5s ease;
 
         nav {
@@ -135,14 +137,14 @@ header {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                @include spacing(padding, top bottom, 1rem);
+                @include spacing(padding, top bottom, 1.75rem);
 
                 &.main-navigation {
                     li {
                         color: $red;
                         font-size: 3.5rem;
                         font-weight: 700;
-                        @include spacing(padding, top bottom, 1rem);
+                        @include spacing(padding, top bottom, 1.75rem);
                     }
                 }
 
@@ -161,11 +163,6 @@ header {
             }
         }
     }
-}
-
-#app.navigationOpen {
-    height: 100vh;
-    overflow: hidden;
 }
 
 @keyframes animateIn {
