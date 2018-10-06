@@ -1,0 +1,9 @@
+.privacy-section {
+    padding-bottom: 5.75rem;
+
+    p {
+        & ~ p {
+            margin-top: 2rem;
+        }
+    }
+}
