@@ -20,19 +20,19 @@
             <nav>
                 <ul>
                     <li>
-                        <router-link to="/" title="Hello">Hello</router-link>
+                        <router-link :to="routes.home" title="Hello">Hello</router-link>
                     </li>
                     <li>
-                        <router-link to="/" title="How It Works">How It Works</router-link>
+                        <router-link :to="routes.howItWorks" title="How It Works">How It Works</router-link>
                     </li>
                     <li>
-                        <router-link to="/" title="Our Story">Our Story</router-link>
+                        <router-link :to="routes.ourStory" title="Our Story">Our Story</router-link>
                     </li>
                     <li>
-                        <router-link to="/" title="FAQ">FAQ</router-link>
+                        <router-link :to="routes.faq" title="FAQ">FAQ</router-link>
                     </li>
                     <li>
-                        <router-link to="/" title="Contact">Contact</router-link>
+                        <router-link :to="routes.contact" title="Contact">Contact</router-link>
                     </li>
                 </ul>
             </nav>
@@ -41,7 +41,14 @@
 </template>
 
 <script>
+import { routes } from "../../router";
+
 export default {
-  name: "Footer"
+  name: "Footer",
+  data() {
+    return {
+      routes
+    };
+  }
 };
 </script>
