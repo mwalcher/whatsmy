@@ -29,7 +29,7 @@ export default {
         {
           title: "What this policy covers",
           body: [
-            "This Privacy Policy covers how Credsii, Inc. and its affiliated companies (collectively, \"Credsii,\" \"we,\" \"us\" or \"our\") collect, share and use information in connection with your access and use of our Services. It does not cover the privacy practices of third parties that we do not own or control."
+            'This Privacy Policy covers how Credsii, Inc. and its affiliated companies (collectively, "Credsii," "we," "us" or "our") collect, share and use information in connection with your access and use of our Services. It does not cover the privacy practices of third parties that we do not own or control.'
           ]
         },
         {
