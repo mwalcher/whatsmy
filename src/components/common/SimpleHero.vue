@@ -5,6 +5,7 @@
             <p v-if="content">{{content}}</p>
             <router-link
                 v-if="buttonLink && buttonText && buttonTitle"
+                exact
                 :to="buttonLink"
                 :title="buttonTitle"
                 class="button"

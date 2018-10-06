@@ -8,6 +8,7 @@
                         <span>{{titleBottom}}</span>
                     </h1>
                     <router-link
+                        exact
                         :to="buttonLink"
                         :title="buttonTitle"
                         class="button"

@@ -3,6 +3,7 @@
         <div class="container">
             <h2 v-if="title">{{title}}</h2>
             <router-link
+                exact
                 :to="buttonLink"
                 :title="buttonTitle"
                 class="button"

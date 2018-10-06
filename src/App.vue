@@ -1,6 +1,10 @@
 <template>
     <div id="app" :class="{navigationOpen}">
-        <Header :class="{headerFixed}" @toggleNavigation="toggleNavigation"/>
+        <Header
+            :class="{headerFixed}"
+            @toggleNavigation="toggleNavigation"
+            @closeNavigation="closeNavigation"
+        />
         <router-view/>
         <Footer/>
     </div>
@@ -27,6 +31,10 @@ export default {
     toggleNavigation: function() {
       this.navigationOpen = !this.navigationOpen;
       document.body.classList.toggle("no-scroll");
+    },
+    closeNavigation: function() {
+      this.navigationOpen = false;
+      document.body.classList.remove("no-scroll");
     },
     headerTransition: function() {
       if (window.scrollY > 10 && !this.headerFixed) {
