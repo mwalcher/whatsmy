@@ -1,0 +1,14 @@
+main.privacy {
+    .container {
+        @media screen and (min-width: $tablet-breakpoint){
+            max-width: calc(#{$phone-container});
+        }
+    }
+
+    .simple-hero {
+        h1 {
+            color: $red;
+            margin-bottom: 5rem;
+        }
+    }
+}
