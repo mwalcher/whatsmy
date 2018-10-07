@@ -1,0 +1,8 @@
+.accordion-list {
+    & ~ .accordion-list {
+        .accordion-section {
+            padding-top: 6rem;
+            border-top: 1px solid $grey;
+        }
+    }
+}

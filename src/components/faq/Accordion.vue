@@ -1,14 +1,16 @@
 <template>
     <div class="accordion">
         <h3>{{title}}</h3>
-        <button>View Answer</button>
-        <div class="content-container">
-            <p
-                v-for="(content, index) in body"
-                :key="index"
-            >
-                {{content}}
-            </p>
+        <button class="content-toggle" @click="toggleAccordion">View Answer</button>
+        <div class="accordion-content" :class="{open : isOpen}">
+            <div class="content-container">
+                <p
+                    v-for="(content, index) in body"
+                    :key="index"
+                >
+                    {{content}}
+                </p>
+            </div>
         </div>
     </div>
 </template>
@@ -24,6 +26,16 @@ export default {
     body: {
       type: Array,
       required: true
+    }
+  },
+  data() {
+    return {
+      isOpen: false
+    };
+  },
+  methods: {
+    toggleAccordion: function() {
+      this.isOpen = !this.isOpen;
     }
   }
 };

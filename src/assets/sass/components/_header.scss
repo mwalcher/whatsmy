@@ -172,15 +172,3 @@ header {
         }
     }
 }
-
-@keyframes animateIn {
-    from {
-        transform: translateY(-2rem);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}

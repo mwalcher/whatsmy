@@ -15,6 +15,7 @@
 //Helpers
 @import
 'utils/mixins',
+'utils/animations',
 'utils/helpers';
 
 //Modules
@@ -33,4 +34,5 @@
 //Pages
 @import
 'pages/home',
+'pages/faq',
 'pages/privacy';

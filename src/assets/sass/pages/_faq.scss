@@ -1,0 +1,6 @@
+main.faq {
+    padding-bottom: 5rem;
+
+    @import'../components/faq/accordion-list';
+    @import'../components/faq/accordion';
+}

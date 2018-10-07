@@ -1,13 +1,15 @@
 <template>
     <section class="accordion-list">
         <div class="container">
-            <h2 v-if="title" class="subtitle">{{title}}</h2>
-            <Accordion
-                v-for="(accordion, index) in accordions"
-                :key="index"
-                :title="accordion.title"
-                :body="accordion.body"
-            />
+            <div class="accordion-section">
+                <h2 v-if="title" class="subtitle">{{title}}</h2>
+                <Accordion
+                    v-for="(accordion, index) in accordions"
+                    :key="index"
+                    :title="accordion.title"
+                    :body="accordion.body"
+                />
+            </div>
         </div>
     </section>
 </template>
