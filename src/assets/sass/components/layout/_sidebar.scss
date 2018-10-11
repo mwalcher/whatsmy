@@ -1,5 +1,6 @@
 .sidebar-container {
     padding-top: 4.5rem;
+    padding-bottom: 5rem;
 
     @media screen and (min-width: $tablet-breakpoint){
         display: flex;
@@ -12,13 +13,30 @@
             position: relative;
             display: block;
             flex: 1 1 50%;
-            padding-right: 6.25rem;
         }
 
         nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &.navFixed {
+                position: fixed;
+                top: $header-height + 3.75rem;
+            }
+
+            &.navBottom {
+                top: auto;
+                bottom: 3.75rem;
+            }
+
             ul {
                 li {
                     @include spacing(padding, top bottom, 1.5rem);
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
                 }
             }
         }
