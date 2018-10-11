@@ -26,10 +26,11 @@
 
 //Components
 @import
-'components/header',
-'components/footer',
-'components/simple-cta',
-'components/simple-hero';
+'components/layout/header',
+'components/layout/footer',
+'components/layout/sidebar',
+'components/common/simple-cta',
+'components/common/simple-hero';
 
 //Pages
 @import

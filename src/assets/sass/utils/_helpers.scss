@@ -21,6 +21,10 @@
     @media screen and (min-width: $desktop-breakpoint){
         max-width: calc(#{$desktop-container});
     }
+
+    .container {
+        @include spacing(padding, left right, 0);
+    }
 }
 
 .image-container {

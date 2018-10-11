@@ -76,7 +76,6 @@ footer {
         }
 
         a {
-            display: block;
             @include set-font(primary, medium);
             font-size: 1.25rem;
             line-height: 1.1;

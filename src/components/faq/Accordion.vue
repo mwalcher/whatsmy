@@ -1,7 +1,7 @@
 <template>
     <div class="accordion">
         <h3>{{title}}</h3>
-        <button class="content-toggle" @click="toggleAccordion">View Answer</button>
+        <button class="cta-link" @click="toggleAccordion">View Answer</button>
         <div class="accordion-content" :class="{open : isOpen}">
             <div class="content-container">
                 <p

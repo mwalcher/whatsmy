@@ -3,4 +3,8 @@ main.faq {
 
     @import'../components/faq/accordion-list';
     @import'../components/faq/accordion';
+
+    .simple-hero {
+        padding-top: 0;
+    }
 }

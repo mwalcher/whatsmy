@@ -1,24 +1,33 @@
 <template>
     <main class="faq">
-        <SimpleHero
-            title="Frequently Asked Questions"
-        />
-        <AccordionList
-            v-for="(section, index) in sections"
-            :key="index"
-            :title="section.title"
-            :accordions="section.accordions"
-        />
+        <div class="container">
+            <Sidebar
+                :navigation="sections"
+            >
+                <SimpleHero
+                    title="Frequently Asked Questions"
+                />
+                <AccordionList
+                    v-for="(section, index) in sections"
+                    :key="index"
+                    :id="section.anchor"
+                    :title="section.title"
+                    :accordions="section.accordions"
+                />
+            </Sidebar>
+        </div>
     </main>
 </template>
 
 <script>
+import Sidebar from "@/components/layout/Sidebar.vue";
 import SimpleHero from "@/components/common/SimpleHero.vue";
 import AccordionList from "@/components/faq/AccordionList.vue";
 
 export default {
   name: "faq",
   components: {
+    Sidebar,
     SimpleHero,
     AccordionList
   },
@@ -26,6 +35,7 @@ export default {
     return {
       sections: [
         {
+          anchor: "section1",
           title: "Section 1",
           accordions: [
             {
@@ -46,6 +56,7 @@ export default {
           ]
         },
         {
+          anchor: "section2",
           title: "Section 2",
           accordions: [
             {
@@ -66,6 +77,7 @@ export default {
           ]
         },
         {
+          anchor: "section3",
           title: "Section 3",
           accordions: [
             {
