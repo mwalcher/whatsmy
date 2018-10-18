@@ -20,6 +20,24 @@
 
                 <fieldset>
                     <legend>What Are You Interested In?</legend>
+                    <div class="checkbox-grid">
+                        <div class="checkbox-container">
+                            <input id="contact-topic-one" name="topic-one" type="checkbox" />
+                            <label for="contact-topic-one">Topic 1</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id="contact-topic-two" name="topic-two" type="checkbox" />
+                            <label for="contact-topic-two">Topic 2</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id="contact-topic-three" name="topic-three" type="checkbox" />
+                            <label for="contact-topic-three">Topic 3</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input id="contact-topic-four" name="topic-four" type="checkbox" />
+                            <label for="contact-topic-four">Topic 4</label>
+                        </div>
+                    </div>
                 </fieldset>
 
                 <fieldset>

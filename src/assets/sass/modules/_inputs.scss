@@ -1,4 +1,4 @@
-input:not([type="submit"]),
+input:not([type="submit"]):not([type="checkbox"]),
 textarea,
 select{
     display: block;

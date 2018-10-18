@@ -1,3 +1,6 @@
+$checkbox-size: 1rem;
+$checkbox-grid-gutter: 1.125rem;
+
 .contact-form {
     .input-container {
         position: relative;
@@ -16,6 +19,58 @@
                     right: 0;
                 }
             }
+        }
+    }
+
+    .checkbox-container {
+        padding: 0.75rem 1rem;
+        border: 1px solid $checkbox-container-border;
+
+        input[type="checkbox"] {
+            @include invisible();
+
+            &:checked {
+                & + label {
+                    &::before {
+                        background-color: $primary-colour;
+                    }
+                }
+            }
+        }
+
+        label {
+            position: relative;
+            padding-left: $checkbox-size + 0.75rem;
+            margin-bottom: 0;
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0.25rem;
+                left: 0;
+                width: $checkbox-size;
+                height: $checkbox-size;
+                background-color: $input-background;
+                border: 1px solid $grey;
+                transition: background-color 0.3s ease;
+            }
+        }
+    }
+
+    .checkbox-grid {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -$checkbox-grid-gutter / 2;
+        margin-right: -$checkbox-grid-gutter / 2;
+        margin-bottom: -$checkbox-grid-gutter;
+
+        .checkbox-container {
+            flex: 0 1 calc(50% - #{$checkbox-grid-gutter});
+            max-width: calc(50% - #{$checkbox-grid-gutter});
+            margin-left: $checkbox-grid-gutter / 2;
+            margin-right: $checkbox-grid-gutter / 2;
+            margin-bottom: $checkbox-grid-gutter;
         }
     }
 
