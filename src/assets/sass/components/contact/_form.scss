@@ -1,0 +1,30 @@
+.contact-form {
+    .input-container {
+        position: relative;
+
+        & ~ .input-container {
+            margin-top: 1.375rem;
+        }
+
+        &.required {
+            label {
+                &::after {
+                    content: "*";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .submit-container {
+        margin-top: 1rem;
+
+        input[type="submit"] {
+            display: block;
+            margin-left: auto;
+        }
+    }
+}

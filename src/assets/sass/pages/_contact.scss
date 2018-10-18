@@ -1,6 +1,10 @@
 $contact-container-width: 26.75rem;
 
 main.contact {
+    @import'../components/contact/form';
+
+    padding-bottom: 3.875rem;
+
     .page-content {
         position: relative;
         max-width: $contact-container-width;
@@ -12,6 +16,8 @@ main.contact {
     }
 
     .simple-hero {
+        padding-bottom: 8.875rem;
+
         .image-container {
             position: absolute;
             top: 0;

@@ -1,6 +1,7 @@
 input:not([type="submit"]),
 textarea,
 select{
+    display: block;
     appearance: none;
     outline: none;
     cursor: pointer;
@@ -17,10 +18,22 @@ select{
     &::placeholder {
         color: rgba($input-colour, 0.5);
     }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active{
+        -webkit-text-fill-color: $input-colour;
+        -webkit-box-shadow: 0 0 0 62.5rem $input-background inset;
+    }
 }
 
 textarea{
     resize: vertical;
     min-height: 8.75rem;
     max-height: 14rem;
+}
+
+fieldset {
+    padding-bottom: 5rem;
 }

@@ -89,3 +89,25 @@ nav {
         }
     }
 }
+
+%label {
+    color: $label-colour;
+    @include set-font(secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+label {
+    @extend %label;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+legend {
+    color: $legend-colour;
+    @include set-font(primary, medium);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1.125rem;
+}

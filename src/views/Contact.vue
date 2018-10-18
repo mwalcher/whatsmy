@@ -11,6 +11,7 @@
                     imageSrc="birds.png"
                     imageAlt="Birds Hero Image"
                 />
+                <ContactForm/>
             </div>
         </div>
     </main>
@@ -18,11 +19,13 @@
 
 <script>
 import SimpleHero from "@/components/common/SimpleHero.vue";
+import ContactForm from "@/components/contact/ContactForm.vue";
 
 export default {
   name: "contact",
   components: {
-    SimpleHero
+    SimpleHero,
+    ContactForm
   }
 };
 </script>
