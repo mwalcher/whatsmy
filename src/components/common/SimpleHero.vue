@@ -1,6 +1,12 @@
 <template>
     <section class="simple-hero">
         <div class="container">
+            <div v-if="imageSrc" class="image-container">
+                <img
+                    :src="require(`@/assets/images/${imageSrc}`)"
+                    :alt="imageAlt"
+                />
+            </div>
             <h1 v-if="title">{{title}}</h1>
             <p v-if="content">{{content}}</p>
             <router-link
@@ -24,7 +30,9 @@ export default {
     content: String,
     buttonLink: String,
     buttonText: String,
-    buttonTitle: String
+    buttonTitle: String,
+    imageSrc: String,
+    imageAlt: String
   }
 };
 </script>
