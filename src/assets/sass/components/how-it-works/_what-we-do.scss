@@ -3,12 +3,19 @@
     padding-bottom: 3rem;
 
     .what-we-do-content {
-        display: flex;
-        align-items: center;
+        @media screen and (min-width: $tablet-breakpoint){
+            display: flex;
+            align-items: center;
+        }
 
         .media-container {
-            position: relative;
-            flex: 1 1 auto;
+            display: none;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                display: block;
+                position: relative;
+                flex: 1 1 auto;
+            }
 
             .back-image {
                 max-width: 17.5rem;
@@ -33,9 +40,17 @@
         }
 
         .content-container {
-            flex: 1 1 23.25rem;
-            max-width: 23.25rem;
-            padding-left: 5.75rem;
+            @media screen and (min-width: $tablet-breakpoint){
+                flex: 1 1 23.25rem;
+                max-width: 23.25rem;
+                padding-left: 5.75rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                margin-bottom: 1.5rem;
+            }
         }
     }
 }
