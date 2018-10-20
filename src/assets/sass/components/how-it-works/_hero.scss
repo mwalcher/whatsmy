@@ -1,0 +1,49 @@
+$how-it-works-image-size: 31.25rem;
+
+.hero {
+    min-height: $how-it-works-image-size;
+
+    .hero-content {
+        position: relative;
+        padding-top: 7.875rem;
+        z-index: 1;
+
+        .content-container {
+            max-width: 24rem;
+
+            h1 {
+                color: $throwback-blue;
+                margin-bottom: 1.5rem;
+            }
+
+            .content {
+                margin-bottom: 1.625rem;
+                max-width: 90%;
+            }
+        }
+    }
+
+    .image-container {
+        position: absolute;
+        top: $header-height;
+        right: 0;
+        max-width: $how-it-works-image-size;
+
+        img {
+            height: $how-it-works-image-size;
+        }
+    }
+
+    .hero-gradient {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 13.125rem;
+        height: $header-height + $how-it-works-image-size + 2.5rem;
+        background-image: url('./assets/images/homepage-how-it-works.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
+}

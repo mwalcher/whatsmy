@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import HowItWorks from "./views/HowItWorks.vue";
 import Contact from "./views/Contact.vue";
 import FAQ from "./views/FAQ.vue";
 import Privacy from "./views/Privacy.vue";
@@ -9,7 +10,7 @@ Vue.use(Router);
 
 export const routes = {
   home: "/",
-  howItWorks: "/",
+  howItWorks: "/how-it-works",
   ourStory: "/",
   contact: "/contact",
   faq: "/faq",
@@ -27,6 +28,11 @@ export default new Router({
       path: routes.home,
       name: "home",
       component: Home
+    },
+    {
+      path: routes.howItWorks,
+      name: "how-it-works",
+      component: HowItWorks
     },
     {
       path: routes.contact,
