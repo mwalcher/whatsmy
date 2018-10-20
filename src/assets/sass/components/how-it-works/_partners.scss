@@ -1,0 +1,34 @@
+.partners {
+    @include spacing(padding, top bottom, 14rem);
+
+    .content-container {
+        text-align: center;
+        max-width: 38.75rem;
+        @include spacing(margin, left right, auto);
+        padding-bottom: 5.875rem;
+    }
+
+    .partner-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        @include spacing(margin, left right bottom, -$container-gutter);
+
+        .partner {
+            flex: 0 50%;
+            max-width: 50%;
+            @include spacing(padding, left right bottom, $container-gutter);
+
+            @media screen and (min-width: $tablet-breakpoint){
+                flex: 0 1 25%;
+                max-width: 25%;
+            }
+
+            .image-container {
+                max-width: 10.625rem;
+                @include spacing(margin, left right, auto);
+            }
+        }
+    }
+}
