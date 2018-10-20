@@ -1,8 +1,13 @@
 .accordion-list {
-    & ~ .accordion-list {
+    &:last-child {
         .accordion-section {
-            padding-top: 6rem;
-            border-top: 1px solid $grey;
+            margin-bottom: 0;
+            border-bottom: 0;
         }
+    }
+
+    .accordion-section {
+        margin-bottom: 6rem;
+        border-bottom: 1px solid $grey;
     }
 }
