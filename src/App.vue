@@ -51,6 +51,14 @@ export default {
     window.removeEventListener("scroll", this.headerTransition);
   }
 };
+
+const scrollOptions = {
+    header: 'header',
+    offset: 50
+};
+
+const scroll = new SmoothScroll('a[href*="#"]', scrollOptions);
+
 </script>
 
 <style lang="scss">
