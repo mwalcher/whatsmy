@@ -53,12 +53,12 @@ export default {
 };
 
 const scrollOptions = {
-    header: 'header',
-    offset: 50
+  header: "header",
+  offset: 50
 };
 
-const scroll = new SmoothScroll('a[href*="#"]', scrollOptions);
-
+// eslint-disable-next-line
+new SmoothScroll('a[href*="#"]', scrollOptions);
 </script>
 
 <style lang="scss">
