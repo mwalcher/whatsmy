@@ -20,6 +20,15 @@
             content="You provide us with your information, we give you the data and ability to track your asset’s worth over time..."
             :steps="steps"
         />
+        <WhatWeDo
+            title="What We Do"
+            sectionTitle="WhatsMy: Your Handy Sidekick"
+            content="Think of WhatsMy as an extension of your team. For each step the customer makes, WhatsMy makes a step too. Customer’s aren’t in the buying journey alone."
+            frontImageSrc="birds.png"
+            frontImageAlt="Front Image"
+            backImageSrc="homepage-hero-cactus.png"
+            backImageAlt="Back Image"
+        />
         <SimpleCTA
             title="Get Started"
             buttonLink="/"
@@ -33,6 +42,7 @@
 import Hero from "@/components/how-it-works/Hero.vue";
 import Partners from "@/components/how-it-works/Partners.vue";
 import WhatYouDo from "@/components/how-it-works/WhatYouDo.vue";
+import WhatWeDo from "@/components/how-it-works/WhatWeDo.vue";
 import SimpleCTA from "@/components/common/SimpleCTA.vue";
 
 export default {
@@ -41,6 +51,7 @@ export default {
     Hero,
     Partners,
     WhatYouDo,
+    WhatWeDo,
     SimpleCTA
   },
   data() {

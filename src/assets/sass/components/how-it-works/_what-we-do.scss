@@ -1,0 +1,41 @@
+.what-we-do{
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+
+    .what-we-do-content {
+        display: flex;
+        align-items: center;
+
+        .media-container {
+            position: relative;
+            flex: 1 1 auto;
+
+            .back-image {
+                max-width: 17.5rem;
+
+                img {
+                    height: 24rem;
+                }
+            }
+
+            .front-image {
+                position: absolute;
+                top: 50%;
+                left: 6rem;
+                transform: translateY(-50%);
+                max-width: 25.5rem;
+                box-shadow: 10px 10px 40px -20px rgba($ocean-blue,0.6);
+
+                img {
+                    height: 16.625rem;
+                }
+            }
+        }
+
+        .content-container {
+            flex: 1 1 23.25rem;
+            max-width: 23.25rem;
+            padding-left: 5.75rem;
+        }
+    }
+}
