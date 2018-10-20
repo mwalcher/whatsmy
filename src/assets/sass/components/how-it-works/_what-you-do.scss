@@ -1,0 +1,56 @@
+.what-you-do {
+    padding-top: 7.75rem;
+    padding-bottom: 12rem;
+    background-color: $input-background;
+
+    .content-container {
+        max-width: 31.25rem;
+        margin-bottom: 0.625rem;
+
+        h3 {
+            color: $red;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .steps-list {
+        @media screen and (min-width: $phone-breakpoint){
+            display: flex;
+            justify-content: space-between;
+            @include spacing(margin, left right, -1.5rem);
+        }
+
+        .step {
+            padding-bottom: 1.5rem;
+
+            @media screen and (min-width: $phone-breakpoint){
+                flex: 0 1 calc(100% / 3);
+                max-width: calc(100% / 3);
+                @include spacing(padding, left right, 1.5rem);
+                padding-bottom: 0;
+            }
+
+            h4 {
+                @include set-font(primary, bold);
+                font-size: 0.875rem;
+                text-transform: uppercase;
+                margin-bottom: 0.75rem;
+            }
+
+            .number {
+                display: flex;
+                align-items: flex-end;
+                width: 8.125rem;
+                height: 6.875rem;
+                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+
+                span {
+                    color: $grey;
+                    @include set-font(primary, black);
+                    font-size: 4.5rem;
+                }
+            }
+        }
+    }
+}
