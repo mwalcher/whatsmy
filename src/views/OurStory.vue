@@ -22,6 +22,14 @@
             :findings="findings"
         />
         <SimpleCTA
+            title="To Summarize"
+            content="After years of work in the automotive and home buying (word choice?) space working to deliver more transparency to the buyer on their purchasing journey, we realized the biggest challenge people have is having one centralized place for accurate knowledge. We’ve released a number of products that have been readily available on third party dealership websites. With WhatsMy, however, our goal is to take the work off the consumer’s plate by bringing information to you, so you have time to do the things that really matter."
+            contentColumns="true"
+            buttonLink="/"
+            buttonText="Get Started"
+            buttonTitle="Get Started"
+        />
+        <SimpleCTA
             title="Get Started"
             buttonLink="/"
             buttonText="Get Started"
