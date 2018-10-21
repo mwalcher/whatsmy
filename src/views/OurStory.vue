@@ -14,6 +14,13 @@
             :id="pageNavigation[0].anchor"
             :facts="facts"
         />
+        <OriginStory
+            :id="pageNavigation[1].anchor"
+            title="The Backstory"
+            sectionTitle="The Findings That Lead to WhatsMy"
+            content="We’ve been in the automotive space for about 4 years (number up for debate), and we’ve learned that these are the biggest challenges peopel face when purchasing a vehicle:"
+            :findings="findings"
+        />
         <SimpleCTA
             title="Get Started"
             buttonLink="/"
@@ -26,6 +33,7 @@
 <script>
 import Hero from "@/components/our-story/Hero.vue";
 import FastFacts from "@/components/our-story/FastFacts.vue";
+import OriginStory from "@/components/our-story/OriginStory.vue";
 import SimpleCTA from "@/components/common/SimpleCTA.vue";
 
 export default {
@@ -33,6 +41,7 @@ export default {
   components: {
     Hero,
     FastFacts,
+    OriginStory,
     SimpleCTA
   },
   data() {
@@ -62,6 +71,28 @@ export default {
           title: "Philosophy",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        }
+      ],
+      findings: [
+        {
+          title: "Finding 1",
+          content:
+            "We’ve been in the automotive space for about 4 years (number up for debate), and we’ve learned that."
+        },
+        {
+          title: "Finding 2",
+          content:
+            "We’ve been in the automotive space for about 4 years (number up for debate), and we’ve learned that."
+        },
+        {
+          title: "Finding 3",
+          content:
+            "We’ve been in the automotive space for about 4 years (number up for debate), and we’ve learned that."
+        },
+        {
+          title: "Finding 4",
+          content:
+            "We’ve been in the automotive space for about 4 years (number up for debate), and we’ve learned that."
         }
       ]
     };

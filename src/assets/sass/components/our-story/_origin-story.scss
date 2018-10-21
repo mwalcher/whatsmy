@@ -1,0 +1,64 @@
+.origin-story {
+    .origin-content {
+        @media screen and (min-width: $tablet-breakpoint){
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .content-container {
+            @media screen and (min-width: $tablet-breakpoint){
+                flex: 0 1 20.75rem;
+                max-width: 20.75rem;
+                padding-right: 1rem;
+            }
+
+            h3 {
+                color: $red;
+                @include set-font(primary, bold);
+                margin-bottom: 2rem;
+            }
+        }
+
+        .findings-list {
+            padding-top: 4rem;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                flex: 0 1 27.875rem;
+                max-width: 27.875rem;
+                padding-left: 1rem;
+            }
+
+            .finding {
+                & ~ .finding {
+                    padding-top: 2.625rem;
+                }
+
+                h4 {
+                    display: flex;
+                    align-items: center;
+                    color: $throwback-blue;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    margin-bottom: 0.375rem;
+
+                    &::before {
+                        content: '';
+                        flex: 0 0 2rem;
+                        display: block;
+                        width: 2rem;
+                        height: 2rem;
+                        background-color: $light-grey;
+                        margin-right: 1.75rem;
+                    }
+                }
+
+                p {
+                    @include set-font(tertiary, semi-bold);
+                    font-size: 1rem;
+                    line-height: 1.875;
+                }
+            }
+        }
+    }
+}
