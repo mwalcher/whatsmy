@@ -1,0 +1,34 @@
+.fast-facts {
+    padding-top: 9rem;
+    padding-bottom: 17.25rem;
+
+    .facts-list {
+        @media screen and (min-width: $phone-breakpoint){
+            display: flex;
+            justify-content: space-between;
+            @include spacing(margin, left right, -0.625rem);
+        }
+
+        .fact {
+            padding-bottom: 1.5rem;
+
+            @media screen and (min-width: $phone-breakpoint){
+                flex: 0 1 calc(100% / 3);
+                max-width: calc(100% / 3);
+                @include spacing(padding, left right, 0.625rem);
+                padding-bottom: 0;
+            }
+
+            h3 {
+                color: $throwback-blue;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                margin-bottom: 1rem;
+
+                @media screen and (min-width: $phone-breakpoint){
+                    margin-bottom: 2.25rem;
+                }
+            }
+        }
+    }
+}
