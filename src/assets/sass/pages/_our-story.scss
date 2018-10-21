@@ -2,4 +2,21 @@ main.our-story {
     @import'../components/our-story/hero';
     @import'../components/our-story/fast-facts';
     @import'../components/our-story/origin-story';
+
+    .image-banner {
+        padding-top: 5.625rem;
+
+        .container {
+            max-width: 100%;
+            padding: 0;
+
+            .image-container {
+                max-width: 46.375rem;
+
+                img {
+                    height: 25.875rem;
+                }
+            }
+        }
+    }
 }

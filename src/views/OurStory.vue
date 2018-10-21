@@ -24,10 +24,14 @@
         <SimpleCTA
             title="To Summarize"
             content="After years of work in the automotive and home buying (word choice?) space working to deliver more transparency to the buyer on their purchasing journey, we realized the biggest challenge people have is having one centralized place for accurate knowledge. We’ve released a number of products that have been readily available on third party dealership websites. With WhatsMy, however, our goal is to take the work off the consumer’s plate by bringing information to you, so you have time to do the things that really matter."
-            contentColumns="true"
+            :contentColumns=true
             buttonLink="/"
             buttonText="Get Started"
             buttonTitle="Get Started"
+        />
+        <ImageBanner
+            imageSrc="homepage-hero-cactus.png"
+            imageAlt="Hero Image"
         />
         <SimpleCTA
             title="Get Started"
@@ -43,6 +47,7 @@ import Hero from "@/components/our-story/Hero.vue";
 import FastFacts from "@/components/our-story/FastFacts.vue";
 import OriginStory from "@/components/our-story/OriginStory.vue";
 import SimpleCTA from "@/components/common/SimpleCTA.vue";
+import ImageBanner from "@/components/common/ImageBanner.vue";
 
 export default {
   name: "our-story",
@@ -50,7 +55,8 @@ export default {
     Hero,
     FastFacts,
     OriginStory,
-    SimpleCTA
+    SimpleCTA,
+    ImageBanner
   },
   data() {
     return {

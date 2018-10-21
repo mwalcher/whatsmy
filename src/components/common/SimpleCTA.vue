@@ -25,8 +25,8 @@ export default {
     title: String,
     content: String,
     contentColumns: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false
     },
     buttonLink: {
       type: String,
