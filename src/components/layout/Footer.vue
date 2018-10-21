@@ -32,7 +32,7 @@
                         <router-link exact :to="routes.faq" title="FAQ">FAQ</router-link>
                     </li>
                     <li>
-                        <router-link exact :to="routes.contact" title="Contact">Contact</router-link>
+                        <router-link exact :to="routes.contact" title="Get In Touch">Get In Touch</router-link>
                     </li>
                 </ul>
             </nav>
