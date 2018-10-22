@@ -1,16 +1,20 @@
 <template>
     <header>
         <div class="header-container container">
-            <router-link exact :to="routes.home" @click.native="$emit('closeNavigation')" title="Home">
-                <img class="logo" :src="require('@/assets/images/whatsmy-logo.svg')" alt="WhatsMy Logo">
-            </router-link>
-            <button id="menuToggle" @click="$emit('toggleNavigation')">
-                <span class="menuLabel">Menu</span>
-                <span class="menuIcon">
-                    <span></span>
-                    <span></span>
-                </span>
-            </button>
+            <div class="content-container">
+                <router-link class="logo" exact :to="routes.home" @click.native="$emit('closeNavigation')" title="Home">
+                    <img :src="require('@/assets/images/whatsmy-logo.svg')" alt="WhatsMy Logo">
+                </router-link>
+                <div class="header-cta-container">
+                    <button id="menuToggle" @click="$emit('toggleNavigation')">
+                        <span class="menuIcon">
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                    <a href="#" class="button" title="Login">Login</a>
+                </div>
+            </div>
         </div>
         <div class="navigation">
             <div class="container">
