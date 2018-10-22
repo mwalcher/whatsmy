@@ -24,6 +24,7 @@
                                 <a
                                     :href="`#${navItem.anchor}`"
                                     :title="navItem.title"
+                                    class="line-hover"
                                 >{{navItem.title}}</a>
                             </li>
                         </ul>

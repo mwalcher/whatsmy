@@ -10,8 +10,8 @@
                         <a
                             :href="`#${navItem.anchor}`"
                             :title="navItem.title"
-                            class="cta-link"
-                        >{{navItem.title}}</a>
+                            class="cta-link line-hover"
+                        >{{navItem.title}}<span>></span></a>
                     </li>
                 </ul>
             </nav>

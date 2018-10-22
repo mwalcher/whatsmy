@@ -190,25 +190,47 @@ header {
             }
 
             ul {
-                @include spacing(padding, top bottom, 1.75rem);
+                @include spacing(padding, top bottom, 1.25rem);
 
                 &.main-navigation {
                     li {
                         color: $red;
-                        font-size: 3.5rem;
+                        font-size: 2.25rem;
                         font-weight: 700;
-                        @include spacing(padding, top bottom, 1.75rem);
+                        line-height: 2.25rem;
+                        @include spacing(padding, top bottom, 0.3125rem);
+
+                        a {
+                            &.line-hover {
+                                @include spacing(padding, left right, 0.3125rem);
+                                transition: color 0.3s ease;
+
+                                &::before {
+                                    content: none;
+                                }
+
+                                &:after {
+                                    height: 100%;
+                                    background-color: $red;
+                                }
+
+                                &:hover, &:focus {
+                                    color: $white;
+                                }
+                            }
+                        }
                     }
                 }
 
                 li {
-                    @include spacing(padding, top bottom, 0.75rem);
+                    @include spacing(padding, top bottom, 0.5rem);
                 }
             }
 
             .copyright {
                 @include set-font(tertiary, semi-bold);
                 font-size: 0.75rem;
+                margin-top: 2rem;
             }
         }
     }
