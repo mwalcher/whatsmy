@@ -6,13 +6,13 @@
                     <form>
                         <p class="cta-title">Wondering what your home or vehicle is worth?</p>
                         <div class="micro-form">
-                            <input type="email" placeholder="Enter your email address" />
+                            <input type="email" autocomplete="email" placeholder="Enter your email address" />
                             <input type="submit" value="Sign Up" />
                         </div>
                     </form>
                 </div>
                 <div class="footer-legal">
-                    <p>© 2018 Mobials Inc. All rights reserved.</p>
+                    <p>Powered by <strong>Mobials</strong>. All rights reserved 2018</p>
                 </div>
             </div>
         </div>

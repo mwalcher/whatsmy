@@ -44,7 +44,15 @@ footer {
                         background-color: $white;
 
                         &::placeholder {
-                            color: rgba($primary-colour, 0.5);
+                            color: $primary-colour;
+                        }
+
+                        &:-webkit-autofill,
+                        &:-webkit-autofill:hover,
+                        &:-webkit-autofill:focus,
+                        &:-webkit-autofill:active{
+                            -webkit-text-fill-color: $primary-colour;
+                            -webkit-box-shadow: 0 0 0 62.5rem $white inset;
                         }
                     }
 
@@ -55,6 +63,7 @@ footer {
                         font-size: $body-font-size;
                         line-height: $body-line-height;
                         padding: 0.6875rem 1.125rem;
+                        background-color: $primary-colour;
                         border: 0.125rem solid $white;
                     }
                 }
@@ -66,6 +75,10 @@ footer {
         flex: 1 1 45%;
         align-items: center;
         background-color: $primary-colour;
+        background-image: url('./assets/images/whatsmy-logo-icon-light.svg');
+        background-repeat: no-repeat;
+        background-size: 3.875rem 3.125rem;
+        background-position: bottom 2.5rem right 2.5rem;
 
         nav {
             padding-left: 20%;
