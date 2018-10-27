@@ -8,7 +8,7 @@
         h3 {
             color: $red;
             @include set-font(primary, bold);
-            margin-bottom: 4.25rem;
+            margin-bottom: 3.625rem;
         }
 
         .feature-list {
@@ -26,6 +26,8 @@
                 h4 {
                     display: flex;
                     color: $throwback-blue;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
                     margin-bottom: 0.875rem;
 
                     &::before {

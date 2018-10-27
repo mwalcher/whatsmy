@@ -11,7 +11,7 @@ select{
 
     @include set-font(primary);
     font-size: $body-font-size;
-    line-height: 1.5rem;
+    line-height: $body-line-height;
     padding: 0.8125rem;
     width: 100%;
 

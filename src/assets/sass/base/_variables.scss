@@ -14,4 +14,5 @@ $desktop-container : 71.25rem + (#{$container-gutter} * 2);
 /* Globals */
 $global-font-size: 1rem;
 $body-font-size: 0.875rem;
+$body-line-height: 1.5rem;
 $header-height: 6.625rem;

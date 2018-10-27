@@ -1,16 +1,16 @@
 <template>
     <main class="home">
         <Hero
-            titleTop="WhatsMy:"
-            titleBottom="A Digital App"
+            titleTop="Values Change."
+            titleBottom="Stay in the Know."
             buttonLink="/"
-            buttonText="Get Started"
-            buttonTitle="Get Started"
+            buttonText="Sign Up For Free"
+            buttonTitle="Sign Up For Free"
             imageSrc="homepage-hero-cactus.png"
             imageAlt="Hero Image"
         />
         <LeadContent
-            text="We get it, selling your home and car is hard. WhatsMy will provide you with this knowledge on a monthly basis, so when it’s time for you to buy or trade in your vehicle, all you have to do is open your WhatsMy app and start using it."
+            text="WhatsMy makes staying on top of your home and vehicle values easy. You paid for the, you should know what they are worth. Sign up to get FREE monthly updates."
         />
         <UseCase
             title="Use Cases"
@@ -23,7 +23,7 @@
         />
         <Features
             title="Features"
-            sectionTitle="With WhatsMy, you never have to guess again."
+            sectionTitle="Use WhatsMy and you’ll never have to guess again."
             imageSrc="device-mockup.png"
             imageAlt="Features Image"
             :features="features"
@@ -31,8 +31,8 @@
         <SimpleCTA
             title="Get Started"
             buttonLink="/"
-            buttonText="Get Started"
-            buttonTitle="Get Started"
+            buttonText="Sign Up For Free"
+            buttonTitle="Sign Up For Free"
         />
     </main>
 </template>
@@ -57,24 +57,24 @@ export default {
     return {
       features: [
         {
-          title: "Everything at a glance.",
+          title: "Your time is valuable.",
           content:
-            "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+            "You have things to do. Let us research your home and vehicle values for you, so you always have the numbers in your back pocket."
         },
         {
-          title: "Never pay too much again.",
+          title: "Sent to you monthly.",
           content:
-            "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+            "You never know when you'll need them, but when you do, you can find updated WhatsMy values in your inbox every month."
         },
         {
-          title: "Reliable data from reliable sources.",
+          title: "Data you can trust.",
           content:
-            "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+            "We only partner with the industry's most reliable data sources. So you know you can trust the information we provide."
         },
         {
-          title: "Get more for your money.",
+          title: "Free today, free always.",
           content:
-            "Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+            "They are your assets. You should know what they're worth, and it shouldn't cost you anything."
         }
       ]
     };
