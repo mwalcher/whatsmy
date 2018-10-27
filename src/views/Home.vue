@@ -54,8 +54,8 @@ export default {
         {
           title: "WhatsMy car worth?",
           image: {
-              src: "car.png",
-              alt: "Car Image"
+            src: "car.png",
+            alt: "Car Image"
           },
           content:
             "Your vehicle is one of your biggest asset. When you know what it's worth, you can make smarter financial decisions, confidently. By partnering with Canadian Black Book, WhatsMy delivers accurate, up-to-date, value information to keep you in the know."
@@ -63,8 +63,8 @@ export default {
         {
           title: "WhatsMy house worth?",
           image: {
-              src: "home.png",
-              alt: "Home Image"
+            src: "home.png",
+            alt: "Home Image"
           },
           content:
             "Your home is your biggest asset. When you know what it's worth, you can make smarter financial decisions, confidently. By partnering with MPAC and Teranet, WhatsMy delivers accurate, up-to-date, value information to keep you in the know."
