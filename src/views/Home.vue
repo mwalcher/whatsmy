@@ -14,12 +14,7 @@
         />
         <UseCase
             title="Use Cases"
-            optionsTitleStart="WhatsMy"
-            optionsTitleEnd="worth?"
-            optionName="house"
-            optionContent="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse eu."
-            imageSrc="home.png"
-            imageAlt="Use Case Image"
+            :options="options"
         />
         <Features
             title="Features"
@@ -55,6 +50,26 @@ export default {
   },
   data() {
     return {
+      options: [
+        {
+          title: "WhatsMy car worth?",
+          image: {
+              src: "car.png",
+              alt: "Car Image"
+          },
+          content:
+            "Your vehicle is one of your biggest asset. When you know what it's worth, you can make smarter financial decisions, confidently. By partnering with Canadian Black Book, WhatsMy delivers accurate, up-to-date, value information to keep you in the know."
+        },
+        {
+          title: "WhatsMy house worth?",
+          image: {
+              src: "home.png",
+              alt: "Home Image"
+          },
+          content:
+            "Your home is your biggest asset. When you know what it's worth, you can make smarter financial decisions, confidently. By partnering with MPAC and Teranet, WhatsMy delivers accurate, up-to-date, value information to keep you in the know."
+        }
+      ],
       features: [
         {
           title: "Your time is valuable.",

@@ -1,22 +1,22 @@
 <template>
     <section class="use-case">
         <div class="container">
-            <div class="use-case-content">
+            <div
+                v-for="(option, index) in options"
+                :key="index"
+                class="use-case-option"
+            >
                 <div class="image-container">
                     <img
-                        :src="require(`@/assets/images/${imageSrc}`)"
-                        :alt="imageAlt"
+                        :src="require(`@/assets/images/${option.image.src}`)"
+                        :alt="option.image.alt"
                     />
                 </div>
 
                 <div class="content-container">
-                    <h2 class="subtitle">{{title}}</h2>
-                    <h3 class="option-title h2">
-                        <span class="overlap">{{optionsTitleStart}}</span>
-                        <button>{{optionName}}</button>
-                        <span>{{optionsTitleEnd}}</span>
-                    </h3>
-                    <p>{{optionContent}}</p>
+                    <h2 v-if="index === 0" class="subtitle">{{title}}</h2>
+                    <h3>{{option.title}}</h3>
+                    <p>{{option.content}}</p>
                 </div>
             </div>
         </div>
@@ -31,28 +31,8 @@ export default {
       type: String,
       required: true
     },
-    optionsTitleStart: {
-      type: String,
-      required: true
-    },
-    optionsTitleEnd: {
-      type: String,
-      required: true
-    },
-    optionName: {
-      type: String,
-      required: true
-    },
-    optionContent: {
-      type: String,
-      required: true
-    },
-    imageSrc: {
-      type: String,
-      required: true
-    },
-    imageAlt: {
-      type: String,
+    options: {
+      type: Array,
       required: true
     }
   }
