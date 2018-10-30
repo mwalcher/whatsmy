@@ -2,8 +2,17 @@
     position: relative;
     margin-top: 14.75rem;
 
+    .container {
+        background-image: url('./assets/images/large-dot-accent.png');
+        background-repeat: no-repeat;
+        background-size: 21.25rem;
+        background-position: top right;
+    }
+
     .content-container {
+        position: relative;
         max-width: 36.25rem;
+        z-index: 1;
 
         h3 {
             color: $red;
@@ -22,6 +31,7 @@
                 padding: 2.5rem 1.25rem;
                 margin: 0.625rem;
                 border: 1px solid $grey;
+                background-color: $white;
 
                 h4 {
                     display: flex;
@@ -47,8 +57,12 @@
 
     .image-container {
         position: absolute;
-        top: 0;
-        right: -5.5rem;
-        max-width: 25rem;
+        top: 2rem;
+        right: 0;
+
+        img {
+            width: auto;
+            height: 45.5rem;
+        }
     }
 }

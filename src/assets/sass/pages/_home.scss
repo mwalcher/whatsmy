@@ -8,4 +8,11 @@ main.home {
     @import'../components/home/leadContent';
     @import'../components/home/useCase';
     @import'../components/home/features';
+
+    .simple-cta {
+        background-image: url('./assets/images/line-accent.png');
+        background-repeat: no-repeat;
+        background-size: 4.875rem;
+        background-position: -1rem;
+    }
 }
