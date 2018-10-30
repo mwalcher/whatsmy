@@ -23,11 +23,11 @@
                     <div class="checkbox-grid">
                         <div class="checkbox-container">
                             <input id="contact-topic-one" name="topic-one" type="checkbox" />
-                            <label for="contact-topic-one">Topic 1</label>
+                            <label for="contact-topic-one">Learning More</label>
                         </div>
                         <div class="checkbox-container">
                             <input id="contact-topic-two" name="topic-two" type="checkbox" />
-                            <label for="contact-topic-two">Topic 2</label>
+                            <label for="contact-topic-two">Techinical Support</label>
                         </div>
                         <div class="checkbox-container">
                             <input id="contact-topic-three" name="topic-three" type="checkbox" />

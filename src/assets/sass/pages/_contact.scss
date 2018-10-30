@@ -29,6 +29,19 @@ main.contact {
                 left: 0;
                 right: auto;
             }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -5.375rem;
+                right: -2rem;
+                width: 21.25rem;
+                height: 10.125rem;
+                background-image: url('./assets/images/large-dot-accent.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
         }
     }
 }
