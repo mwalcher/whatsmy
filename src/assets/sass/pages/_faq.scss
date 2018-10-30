@@ -1,4 +1,18 @@
 main.faq {
+    &::before {
+        content: '';
+        position: absolute;
+        top: $header-height + 4.5rem;
+        left: -2rem;
+        width: 21.25rem;
+        height: 15.75rem;
+        background-image: url('./assets/images/large-dot-accent.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
+
     @import'../components/faq/accordion-list';
     @import'../components/faq/accordion';
 
