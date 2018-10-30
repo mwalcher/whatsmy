@@ -74,18 +74,15 @@ export default {
       steps: [
         {
           title: "Create Account",
-          content:
-            "Sign up for WhatsMy and create your free account."
+          content: "Sign up for WhatsMy and create your free account."
         },
         {
           title: "Complete Details",
-          content:
-            "Tell us about your home and/or vehicle."
+          content: "Tell us about your home and/or vehicle."
         },
         {
           title: "See Results",
-          content:
-            "Sit back, relax and receive valuable monthly updates."
+          content: "Sit back, relax and receive valuable monthly updates."
         }
       ]
     };
