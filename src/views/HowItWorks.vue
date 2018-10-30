@@ -1,8 +1,9 @@
 <template>
     <main class="how-it-works">
         <Hero
-            title="How WhatsMy Works"
-            content="Think of WhatsMy as an extension of your team. On demand, on time, all the time. Here’s how we do it."
+            titleTop="How It"
+            titleBottom="Works"
+            content="Monthly reporting, on time, every time. Here's how we do it."
             buttonLink="/"
             buttonText="Get Started"
             buttonTitle="Get Started"
@@ -10,14 +11,14 @@
             imageAlt="Hero Image"
         />
         <Partners
-            title="We Get Some Help From Our Friends"
-            content="Our goal is to take the heavy lifting off your back. We rely on our team of experts to help us do it."
+            title="We Have A Little Help From Our Friends"
+            content="We partner with the industry's most trusted data providers to deliver your monthly reports."
             :partners="partners"
         />
         <WhatYouDo
             title="What You Must Do"
             sectionTitle="The process is simple."
-            content="You provide us with your information, we give you the data and ability to track your asset’s worth over time..."
+            content="You provide us your information, we give you the data and ability to track your asset’s value over time..."
             :steps="steps"
         />
         <WhatWeDo
@@ -62,33 +63,29 @@ export default {
           alt: "Canadian Black Book"
         },
         {
-          src: "partner-trans-union.png",
-          alt: "TransUnion"
+          src: "partner-teranet.png",
+          alt: "Teranet"
         },
         {
-          src: "partner-black-book.png",
-          alt: "Canadian Black Book"
-        },
-        {
-          src: "partner-trans-union.png",
-          alt: "TransUnion"
+          src: "partner-mpac.png",
+          alt: "MPAC"
         }
       ],
       steps: [
         {
-          title: "Choose What You Want",
+          title: "Create Account",
           content:
-            "Sign up for WhatsMy and provide your information about your assets."
+            "Sign up for WhatsMy and create your free account."
         },
         {
-          title: "Choose What You Want",
+          title: "Complete Details",
           content:
-            "Receive monthly updates from WhatsMy on the value of your assets."
+            "Tell us about your home and/or vehicle."
         },
         {
-          title: "Choose What You Want",
+          title: "See Results",
           content:
-            "Sign in to make adjustmets to your assets and add new vehicles."
+            "Sit back, relax and receive valuable monthly updates."
         }
       ]
     };

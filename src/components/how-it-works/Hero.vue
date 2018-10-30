@@ -3,8 +3,11 @@
         <div class="container">
             <div class="hero-content">
                 <div class="content-container">
-                    <h1>{{title}}</h1>
-                    <p class="content">{{content}}</p>
+                    <h1>
+                        <span>{{titleTop}}</span>
+                        <span>{{titleBottom}}</span>
+                    </h1>
+                    <p class="leadText">{{content}}</p>
                     <router-link
                         exact
                         :to="buttonLink"
@@ -32,7 +35,11 @@
 export default {
   name: "HowItWorksHero",
   props: {
-    title: {
+    titleTop: {
+      type: String,
+      required: true
+    },
+    titleBottom: {
       type: String,
       required: true
     },

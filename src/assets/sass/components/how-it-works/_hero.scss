@@ -1,46 +1,66 @@
-$how-it-works-image-size: 31.25rem;
+$how-it-works-image-width: 28.125rem;
+$how-it-works-image-height: 29rem;
+$gradient-space: 3.5rem;
 
 .hero {
-    min-height: $how-it-works-image-size;
+    position: relative;
+    min-height: $how-it-works-image-height;
 
     .hero-content {
         position: relative;
-        padding-top: 7.875rem;
+        padding-top: 4.125rem;
         z-index: 1;
 
         .content-container {
-            max-width: 24rem;
+            max-width: 21.5rem;
 
             h1 {
-                color: $throwback-blue;
+                color: $red;
                 margin-bottom: 1.5rem;
+
+                span {
+                    display: block;
+                }
             }
 
-            .content {
-                margin-bottom: 1.625rem;
-                max-width: 90%;
+            .leadText {
+                margin-bottom: 2.5rem;
             }
         }
     }
 
     .image-container {
         position: absolute;
-        top: $header-height;
+        top: 0;
         right: 0;
-        max-width: $how-it-works-image-size;
+        max-width: $how-it-works-image-width;
 
         img {
-            height: $how-it-works-image-size;
+            height: $how-it-works-image-height;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -2.5rem;
+            right: $how-it-works-image-width;
+            transform: translateX(40%);
+            width: 14.625rem;
+            height: 11.25rem;
+            background-image: url('./assets/images/large-dot-accent.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
     }
 
     .hero-gradient {
         position: absolute;
-        top: 0;
+        bottom: -$gradient-space;
         right: 0;
-        width: 13.125rem;
-        height: $header-height + $how-it-works-image-size + 2.5rem;
-        background-image: url('./assets/images/how-it-works-header.png');
+        width: $how-it-works-image-width + $gradient-space;
+        height: 15.875rem;
+        background-image: url('./assets/images/homepage-header.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

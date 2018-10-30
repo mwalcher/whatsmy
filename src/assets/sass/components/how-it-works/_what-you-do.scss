@@ -1,11 +1,10 @@
 .what-you-do {
-    padding-top: 7.75rem;
-    padding-bottom: 12rem;
     background-color: $input-background;
+    @include spacing(padding, top bottom, 6.25rem);
 
     .content-container {
         max-width: 31.25rem;
-        margin-bottom: 0.625rem;
+        margin-bottom: 1.875rem;
 
         h3 {
             color: $red;
@@ -42,11 +41,15 @@
                 align-items: flex-end;
                 width: 8.125rem;
                 height: 6.875rem;
+                background-image: url('./assets/images/small-dot-accent.png');
+                background-repeat: no-repeat;
+                background-size: 4.625rem;
+                background-position: right;
                 padding-bottom: 1rem;
-                margin-bottom: 1rem;
+                margin-bottom: 1.625rem;
 
                 span {
-                    color: $grey;
+                    color: $throwback-blue;
                     @include set-font(primary, black);
                     font-size: 4.5rem;
                 }

@@ -25,7 +25,7 @@ h6,
 .h3 {
     @include set-font(primary, medium);
     font-size: 1.25rem;
-    line-height: 1.5;
+    line-height: $body-line-height;
 }
 
 p {
@@ -134,7 +134,7 @@ nav {
     color: $label-colour;
     @include set-font(secondary);
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: $body-line-height;
 }
 
 label {
