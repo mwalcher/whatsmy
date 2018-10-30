@@ -3,55 +3,90 @@ $our-story-image-height: 32.625rem;
 $gradient-space: 3.5rem;
 
 .hero {
-    min-height: $our-story-image-height + $gradient-space;
+    position: relative;
 
     .hero-content {
         position: relative;
-        padding-top: 9rem;
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+        height: $our-story-image-height + $gradient-space;
         z-index: 1;
 
         .content-container {
             max-width: 24rem;
 
             h1 {
-                color: $throwback-blue;
-                margin-bottom: 2.5rem;
+                color: $red;
+                margin-bottom: 1.5rem;
 
                 span {
                     display: block;
                 }
             }
 
-            .page-navigation {
-                padding-top: 7rem;
+            .leadText {
+                margin-bottom: 1.875rem;
+            }
+        }
 
-                ul {
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
+        .page-navigation {
+            margin-top: auto;
 
-                    li {
-                        & ~ li {
-                            padding-left: 2rem;
-                        }
+            ul {
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+
+                li {
+                    & ~ li {
+                        padding-left: 2rem;
                     }
                 }
+            }
 
-                a {
-                    font-size: 0.875rem;
-                }
+            a {
+                font-size: 0.875rem;
             }
         }
     }
 
     .image-container {
         position: absolute;
-        top: $header-height;
+        top: 0;
         right: 0;
         max-width: $our-story-image-width;
 
         img {
             height: $our-story-image-height;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -$header-height + 0.5rem;
+            right: 0;
+            width: 21.25rem;
+            height: 15.75rem;
+            background-image: url('./assets/images/large-dot-accent.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            right: $our-story-image-width;
+            transform: translateX(50%);
+            width: 6.875rem;
+            height: 7.25rem;
+            background-image: url('./assets/images/stripe-accent-vertical.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
     }
 

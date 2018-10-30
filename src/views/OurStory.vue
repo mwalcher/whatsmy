@@ -1,13 +1,14 @@
 <template>
     <main class="our-story">
         <Hero
-            titleTop="WhatsMy:"
-            titleBottom="A Digital App"
+            titleTop="About"
+            titleBottom="WhatsMy"
+            content="WhatsMy empowers home and vehicle owners to make smarter decisions."
             buttonLink="/"
-            buttonText="Get Started"
-            buttonTitle="Get Started"
+            buttonText="Sign Up For Free"
+            buttonTitle="Sign Up For Free"
             :pageNavigation="pageNavigation"
-            imageSrc="homepage-hero-cactus.png"
+            imageSrc="our-story-hero-cactus.png"
             imageAlt="Hero Image"
         />
         <FastFacts
@@ -23,21 +24,11 @@
         />
         <SimpleCTA
             title="To Summarize"
-            content="After years of work in the automotive and home buying (word choice?) space working to deliver more transparency to the buyer on their purchasing journey, we realized the biggest challenge people have is having one centralized place for accurate knowledge. We’ve released a number of products that have been readily available on third party dealership websites. With WhatsMy, however, our goal is to take the work off the consumer’s plate by bringing information to you, so you have time to do the things that really matter."
-            :contentColumns=true
+            content="If you own a home and/or vehicle, you should know what they are worth. With decades of experience in the home and auto buying spaces, our team recognized that there is currently no centralized place where you can find out how much your assets have increased/decreased in value over time. With WhatsMy, our goal is to take the work off your plate by delivering the information you need — automatically, monthly, and free of charge. When you’re out living your life, we’re here in the background, making sure you have the information needed to make smarter decisions."
+            :contentColumns="true"
             buttonLink="/"
-            buttonText="Get Started"
-            buttonTitle="Get Started"
-        />
-        <ImageBanner
-            imageSrc="homepage-hero-cactus.png"
-            imageAlt="Hero Image"
-        />
-        <SimpleCTA
-            title="Get Started"
-            buttonLink="/"
-            buttonText="Get Started"
-            buttonTitle="Get Started"
+            buttonText="Sign Up For Free"
+            buttonTitle="Sign Up For Free"
         />
     </main>
 </template>
@@ -47,7 +38,6 @@ import Hero from "@/components/our-story/Hero.vue";
 import FastFacts from "@/components/our-story/FastFacts.vue";
 import OriginStory from "@/components/our-story/OriginStory.vue";
 import SimpleCTA from "@/components/common/SimpleCTA.vue";
-import ImageBanner from "@/components/common/ImageBanner.vue";
 
 export default {
   name: "our-story",
@@ -55,8 +45,7 @@ export default {
     Hero,
     FastFacts,
     OriginStory,
-    SimpleCTA,
-    ImageBanner
+    SimpleCTA
   },
   data() {
     return {
@@ -74,17 +63,17 @@ export default {
         {
           title: "Origin",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+            "WhatsMy was created by Mobials Inc. after a number of customers asked for home and vehicle values while they weren’t actively shopping for a home or vehicle."
         },
         {
           title: "Team",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+            "We operate on one guiding principal – We believe consumers should have free, transparent access to valuation data for their home and/or vehicle."
         },
         {
           title: "Philosophy",
           content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+            "Our mission is to make home and vehicle ownership and shopping stress free."
         }
       ],
       findings: [

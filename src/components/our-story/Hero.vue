@@ -7,6 +7,7 @@
                         <span>{{titleTop}}</span>
                         <span>{{titleBottom}}</span>
                     </h1>
+                    <p class="leadText">{{content}}</p>
                     <router-link
                         exact
                         :to="buttonLink"
@@ -15,21 +16,22 @@
                     >
                         {{buttonText}}
                     </router-link>
-                    <nav class="page-navigation">
-                        <ul>
-                            <li
-                                v-for="navItem in pageNavigation"
-                                :key="navItem.anchor"
-                            >
-                                <a
-                                    :href="`#${navItem.anchor}`"
-                                    :title="navItem.title"
-                                    class="line-hover"
-                                >{{navItem.title}}</a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
+
+                <nav class="page-navigation">
+                    <ul>
+                        <li
+                            v-for="navItem in pageNavigation"
+                            :key="navItem.anchor"
+                        >
+                            <a
+                                :href="`#${navItem.anchor}`"
+                                :title="navItem.title"
+                                class="line-hover"
+                            >{{navItem.title}}</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
 
@@ -45,13 +47,17 @@
 
 <script>
 export default {
-  name: "HowItWorksHero",
+  name: "OurStoryHero",
   props: {
     titleTop: {
       type: String,
       required: true
     },
     titleBottom: {
+      type: String,
+      required: true
+    },
+    content: {
       type: String,
       required: true
     },

@@ -1,12 +1,17 @@
 .fast-facts {
-    padding-top: 9rem;
-    padding-bottom: 17.25rem;
+    padding-top: 7.5rem;
+    padding-bottom: 6rem;
+
+    .fast-facts-container {
+        background-color: $input-background;
+        @include spacing(padding, top bottom, 6.25rem);
+    }
 
     .facts-list {
         @media screen and (min-width: $phone-breakpoint){
             display: flex;
             justify-content: space-between;
-            @include spacing(margin, left right, -0.625rem);
+            @include spacing(margin, left right, -$container-gutter);
         }
 
         .fact {
@@ -15,7 +20,7 @@
             @media screen and (min-width: $phone-breakpoint){
                 flex: 0 1 calc(100% / 3);
                 max-width: calc(100% / 3);
-                @include spacing(padding, left right, 0.625rem);
+                @include spacing(padding, left right, $container-gutter);
                 padding-bottom: 0;
             }
 
