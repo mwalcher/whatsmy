@@ -1,56 +1,110 @@
+$offset-top: 4.25rem;
+$offset-bottom: 2.25rem;
+
 .use-case {
     background-color: $input-background;
-    margin-top: 4.25rem;
-    margin-bottom: 2.25rem;
+    @include spacing(padding, top bottom, 6.25rem);
+
+    @media screen and (min-width: $tablet-breakpoint){
+        margin-top: $offset-top;
+        margin-bottom: $offset-bottom;
+        padding: 0;
+    }
 
     .use-case-option {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-bottom: 5.5rem;
+        padding-bottom: 4rem;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 5.5rem;
+        }
 
         &:first-child {
-            top: -4.25rem;
-            margin-bottom: -6.5rem;
-            align-items: flex-start;
+            @media screen and (min-width: $tablet-breakpoint){
+                top: -$offset-top;
+                margin-bottom: -($offset-top + $offset-bottom);
+                align-items: flex-start;
+            }
 
             .content-container {
-                padding-top: 1.625rem;
+                @media screen and (min-width: $tablet-breakpoint){
+                    padding-top: 1.625rem;
+                }
             }
         }
 
         &:last-child {
-            top: 2.25rem;
             padding-bottom: 0;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                top: $offset-bottom;
+            }
         }
 
         .image-container, .content-container {
-            flex: 0 1 28rem;
-            max-width: 28rem;
+            @media screen and (min-width: $tablet-breakpoint){
+                flex: 0 1 28rem;
+                max-width: 28rem;
+            }
         }
 
         .image-container {
-            background-image: url('./assets/images/stripe-accent.png');
-            background-repeat: no-repeat;
-            background-size: 6.875rem;
-            background-position: top right;
-            padding-top: 0.75rem;
-            padding-right: 1.125rem;
+            max-width: 13.125rem;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                max-width: 100%;
+                background-image: url('./assets/images/stripe-accent.png');
+                background-repeat: no-repeat;
+                background-size: 6.875rem;
+                background-position: top right;
+                padding-top: 0.75rem;
+                padding-right: 1.125rem;
+            }
+
+            &.desktop-image {
+                display: none;
+
+                @media screen and (min-width: $tablet-breakpoint){
+                    display: block;
+                }
+            }
+
+            &.mobile-image {
+                display: block;
+                margin-bottom: 2rem;
+
+                @media screen and (min-width: $tablet-breakpoint){
+                    display: none;
+                }
+            }
         }
 
         .content-container {
-            padding-left: 5.875rem;
-            padding-bottom: 1.5rem;
+            @media screen and (min-width: $tablet-breakpoint){
+                padding-left: 5.875rem;
+                padding-bottom: 1.5rem;
+            }
 
             h2 {
-                margin-bottom: 3.75rem;
+                margin-bottom: 4rem;
+
+                @media screen and (min-width: $tablet-breakpoint){
+                    margin-bottom: 3.75rem;
+                }
             }
 
             h3 {
-                font-size: 1.5rem;
-                line-height: 2rem;
+                font-size: 1.375rem;
+                line-height: 1;
                 margin-bottom: 2rem;
+
+                @media screen and (min-width: $tablet-breakpoint){
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
             }
         }
     }
