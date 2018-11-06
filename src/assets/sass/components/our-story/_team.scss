@@ -6,6 +6,7 @@ $team-max-width: 25rem + $team-gutter-size;
     .team-list {
         display: flex;
         flex-wrap: wrap;
+        align-items: flex-start;
         justify-content: space-between;
         margin-left: -$team-gutter-size;
         margin-right: -$team-gutter-size;
@@ -35,6 +36,18 @@ $team-max-width: 25rem + $team-gutter-size;
 
     .team-card {
         padding-bottom: 4.375rem;
+
+        &:nth-child(2) {
+            margin-top: 4.875rem;
+        }
+
+        &:nth-child(odd) {
+            margin-top: -17.75rem;
+        }
+
+        &:last-child {
+            padding-bottom: 2.375rem;
+        }
 
         .image-container {
             position: relative;
@@ -86,6 +99,7 @@ $team-max-width: 25rem + $team-gutter-size;
         .content-container {
             position: relative;
             top: -2.75rem;
+            margin-bottom: -2.75rem;
 
             h4 {
                 color: $red;
