@@ -8,8 +8,13 @@ body {
 
 h1, .h1 {
     @include set-font(primary, bold);
-    font-size: 3.5rem;
-    line-height: 4rem;
+    font-size: 2.25rem;
+    line-height: 2.875rem;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
 }
 
 h2, .h2 {
@@ -35,8 +40,12 @@ p {
 
 .leadText {
     @include set-font(secondary);
-    font-size: 1.375rem;
+    font-size: 1rem;
     line-height: 2.25rem;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        font-size: 1.375rem;
+    }
 }
 
 .subtitle {

@@ -1,11 +1,21 @@
 .hero {
     .hero-content {
         position: relative;
-        padding-top: 5.25rem;
+        padding-top: 2rem;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            padding-top: 5.25rem;
+        }
 
         .content-container {
-            padding-left: 4.5rem;
-            padding-bottom: 2.25rem;
+            text-align: center;
+            padding-bottom: 4.375rem;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                text-align: left;
+                padding-left: 4.5rem;
+                padding-bottom: 2.25rem;
+            }
 
             h1 {
                 margin-bottom: 2.125rem;
@@ -21,19 +31,26 @@
         }
 
         .hero-gradient {
-            background-image: url('./assets/images/homepage-header.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            height: 15.875rem;
+            display: none;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                display: block;
+                background-image: url('./assets/images/homepage-header.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 15.875rem;
+            }
         }
 
         .image-container {
-            position: absolute;
-            top: 0;
-            right: 3.25rem;
-            max-width: 18.75rem;
-            box-shadow: 10px 10px 40px -20px rgba($ocean-blue,0.6);
+            @media screen and (min-width: $tablet-breakpoint){
+                position: absolute;
+                top: 0;
+                right: 3.25rem;
+                max-width: 18.75rem;
+                box-shadow: 10px 10px 40px -20px rgba($ocean-blue,0.6);
+            }
         }
     }
 }

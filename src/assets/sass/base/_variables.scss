@@ -5,7 +5,7 @@ $laptop-breakpoint  : 62rem;  // 992px
 $desktop-breakpoint : 75rem;  // 1200px
 
 /* Container */
-$container-gutter  : 1rem;
+$container-gutter  : 1.875rem;
 $phone-container   : 33.75rem + (#{$container-gutter} * 2);
 $tablet-container  : 45rem + (#{$container-gutter} * 2);
 $laptop-container  : 60rem + (#{$container-gutter} * 2);
