@@ -2,13 +2,19 @@ $feature-gutter: 0.625rem;
 
 .features {
     position: relative;
-    margin-top: 14.75rem;
+    margin-top: 6.25rem;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        margin-top: 14.75rem;
+    }
 
     .container {
-        background-image: url('./assets/images/large-dot-accent.png');
-        background-repeat: no-repeat;
-        background-size: 21.25rem;
-        background-position: top right;
+        @media screen and (min-width: $tablet-breakpoint){
+            background-image: url('./assets/images/large-dot-accent.png');
+            background-repeat: no-repeat;
+            background-size: 21.25rem;
+            background-position: top right;
+        }
     }
 
     .content-container {
@@ -19,21 +25,34 @@ $feature-gutter: 0.625rem;
         h3 {
             color: $red;
             @include set-font(primary, bold);
-            margin-bottom: 3.625rem;
+            margin-bottom: 2rem;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                margin-bottom: 3.625rem;
+            }
         }
 
         .feature-list {
-            display: flex;
-            flex-wrap: wrap;
-            margin: -$feature-gutter;
+            margin-bottom: -1.25rem;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                display: flex;
+                flex-wrap: wrap;
+                margin: -$feature-gutter;
+            }
 
             .feature {
-                flex: 0 1 calc(50% - 1.25rem);
-                max-width: calc(50% - 1.25rem);
-                padding: 2.5rem 1.25rem;
-                margin: $feature-gutter;
+                padding: 3.125rem 1.25rem;
                 border: 1px solid $grey;
                 background-color: $white;
+                margin-bottom: 1.25rem;
+
+                @media screen and (min-width: $tablet-breakpoint){
+                    flex: 0 1 calc(50% - 1.25rem);
+                    max-width: calc(50% - 1.25rem);
+                    padding: 2.5rem 1.25rem;
+                    margin: $feature-gutter;
+                }
 
                 h4 {
                     display: flex;
@@ -58,9 +77,14 @@ $feature-gutter: 0.625rem;
     }
 
     .image-container {
-        position: absolute;
-        top: 2rem;
-        right: 0;
+        display: none;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            display: block;
+            position: absolute;
+            top: 2rem;
+            right: 0;
+        }
 
         img {
             width: auto;

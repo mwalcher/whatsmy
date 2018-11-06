@@ -19,8 +19,13 @@ h1, .h1 {
 
 h2, .h2 {
     @include set-font(primary, medium);
-    font-size: 2.375rem;
-    line-height: 3.125rem;
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        font-size: 2.375rem;
+        line-height: 3.125rem;
+    }
 }
 
 h3,
@@ -55,7 +60,7 @@ p {
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.75rem;
 }
 
 a {

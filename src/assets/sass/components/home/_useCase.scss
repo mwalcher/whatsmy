@@ -88,14 +88,6 @@ $offset-bottom: 2.25rem;
                 padding-bottom: 1.5rem;
             }
 
-            h2 {
-                margin-bottom: 4rem;
-
-                @media screen and (min-width: $tablet-breakpoint){
-                    margin-bottom: 3.75rem;
-                }
-            }
-
             h3 {
                 font-size: 1.375rem;
                 line-height: 1;
