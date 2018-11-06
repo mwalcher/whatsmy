@@ -1,8 +1,10 @@
 main.home {
-    background-image: url('./assets/images/organic-shape.png');
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: top right;
+    @media screen and (min-width: $tablet-breakpoint){
+        background-image: url('./assets/images/organic-shape.png');
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: top right;
+    }
 
     @import'../components/home/hero';
     @import'../components/home/leadContent';
@@ -10,9 +12,11 @@ main.home {
     @import'../components/home/features';
 
     .simple-cta {
-        background-image: url('./assets/images/line-accent.png');
-        background-repeat: no-repeat;
-        background-size: 4.875rem;
-        background-position: -1rem;
+        @media screen and (min-width: $tablet-breakpoint){
+            background-image: url('./assets/images/line-accent.png');
+            background-repeat: no-repeat;
+            background-size: 4.875rem;
+            background-position: -1rem;
+        }
     }
 }
