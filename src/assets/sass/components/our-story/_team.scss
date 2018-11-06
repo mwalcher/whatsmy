@@ -1,0 +1,113 @@
+$team-image-size: 22rem;
+$team-gutter-size: 1.5rem;
+$team-max-width: 25rem + $team-gutter-size;
+
+.team {
+    .team-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: -$team-gutter-size;
+        margin-right: -$team-gutter-size;
+    }
+
+    .team-card, .team-title {
+        flex: 0 1 50%;
+        max-width: $team-max-width;
+        padding-left: $team-gutter-size;
+        padding-right: $team-gutter-size;
+    }
+
+    .team-title {
+        .title-container {
+            max-width: $team-image-size;
+            margin-left: auto;
+
+            .subtitle {
+                margin-bottom: 4rem;
+            }
+
+            h3 {
+                color: $red;
+            }
+        }
+    }
+
+    .team-card {
+        padding-bottom: 4.375rem;
+
+        .image-container {
+            position: relative;
+            max-width: $team-image-size;
+            margin-left: auto;
+
+            .image-flag {
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: rotate(-90deg) translateX(-100%);
+                transform-origin: top left;
+                background-color: $throwback-blue;
+            }
+
+            .team-title {
+                color: $white;
+                @include set-font(primary, bold);
+                font-size: 1.25rem;
+                line-height: 2rem;
+                width: 12.5rem;
+                padding: 0.75rem 0 0.75rem 0.875rem;
+                white-space: nowrap;
+
+                span {
+                    display: block;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
+            }
+
+            .team-linkedin {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 3.5rem;
+                background-color: $white;
+
+                .icon {
+                    display: block;
+                    color: $throwback-blue;
+                    font-size: 2rem;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .content-container {
+            position: relative;
+            top: -2.75rem;
+
+            h4 {
+                color: $red;
+                word-spacing: $team-max-width;
+                margin-bottom: 0.5rem;
+            }
+
+            .content {
+                position: relative;
+                padding-left: 2.25rem;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    width: 0.5rem;
+                    height: 80%;
+                    background-color: $grey;
+                }
+            }
+        }
+    }
+}

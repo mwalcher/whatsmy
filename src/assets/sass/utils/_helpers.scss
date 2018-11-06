@@ -46,6 +46,10 @@
     margin: 0 !important;
 }
 
+.invisible {
+    @include invisible();
+}
+
 /* Gradients */
 .yellow-gradient {
     @include gradient($orange, $yellow);

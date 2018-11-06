@@ -15,12 +15,11 @@
             :id="pageNavigation[0].anchor"
             :facts="facts"
         />
-        <OriginStory
+        <Team
             :id="pageNavigation[1].anchor"
-            title="The Backstory"
-            sectionTitle="The Findings That Lead to WhatsMy"
-            content="We’ve been in the automotive space for about 4 years (number up for debate), and we’ve learned that these are the biggest challenges peopel face when purchasing a vehicle:"
-            :findings="findings"
+            title="The Leadership Team"
+            sectionTitle="Get to know the people behind WhatsMy"
+            :team="team"
         />
         <SimpleCTA
             title="To Summarize"
@@ -36,7 +35,7 @@
 <script>
 import Hero from "@/components/our-story/Hero.vue";
 import FastFacts from "@/components/our-story/FastFacts.vue";
-import OriginStory from "@/components/our-story/OriginStory.vue";
+import Team from "@/components/our-story/Team.vue";
 import SimpleCTA from "@/components/common/SimpleCTA.vue";
 
 export default {
@@ -44,7 +43,7 @@ export default {
   components: {
     Hero,
     FastFacts,
-    OriginStory,
+    Team,
     SimpleCTA
   },
   data() {
@@ -55,8 +54,8 @@ export default {
           title: "Some Fast Facts"
         },
         {
-          anchor: "origin-story",
-          title: "Origin Story"
+          anchor: "leadership-team",
+          title: "The Leadership Team"
         }
       ],
       facts: [
@@ -76,26 +75,51 @@ export default {
             "Our mission is to make home and vehicle ownership and shopping stress free."
         }
       ],
-      findings: [
+      team: [
         {
-          title: "Finding 1",
+          name: "James Hayes",
+          title: "Co-Founder, CEO",
+          linkedin: "https://www.linkedin.com/in/james-hayes-8bb86111/",
+          image: {
+            src: "team-james.jpg",
+            alt: "James Hayes"
+          },
           content:
-            "We’ve been in the automotive space for about 4 years (number up for debate), and we’ve learned that."
+            "Focused, driven, imaginative. James is responsible for providing the vision, thought leadership, and business strategy. It is James’s ability to focus on the big picture while maintaining quality on the finest details that facilitates Mobials success."
         },
         {
-          title: "Finding 2",
+          name: "Brad Hanebury",
+          title: "Co-Founder, CTO",
+          linkedin: "https://www.linkedin.com/in/brad-hanebury-8589b66/",
+          image: {
+            src: "team-brad.jpg",
+            alt: "Brad Hanebury"
+          },
           content:
-            "We’ve been in the automotive space for about 4 years (number up for debate), and we’ve learned that."
+            "Brad provides the architecture and direction for all of Mobials’ products. His focus is on scaling applications across multiple verticals and locales, while keeping in mind that the ultimate goal of application development is to enable a positive user experience."
         },
         {
-          title: "Finding 3",
+          name: "Marty Meadows",
+          title: "Co-Founder,",
+          subtitle: "President (Automotive)",
+          linkedin: "https://www.linkedin.com/in/marty-meadows-2738528/",
+          image: {
+            src: "team-martym.jpg",
+            alt: "Marty Meadows"
+          },
           content:
-            "We’ve been in the automotive space for about 4 years (number up for debate), and we’ve learned that."
+            "Marty has a unique combination of business strategy, operational acumen and sales expertise. While designing Mobials’ business strategy and facilitating contract management, Marty works with partners on strategic development."
         },
         {
-          title: "Finding 4",
+          name: "David Brebner",
+          title: "Co-Founder, CFO",
+          linkedin: "https://www.linkedin.com/in/davidbrebner/",
+          image: {
+            src: "team-dave.jpg",
+            alt: "David Brebner"
+          },
           content:
-            "We’ve been in the automotive space for about 4 years (number up for debate), and we’ve learned that."
+            "Dave’s breadth of historical clients in various industries and his own entrepreneurial activities provide a foundation of knowledge and experiences to support his financial, accounting, governance and structural guidance."
         }
       ]
     };
