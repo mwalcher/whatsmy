@@ -70,7 +70,7 @@ $gradient-space: 3.5rem;
             height: 15.75rem;
             background-image: url('./assets/images/large-dot-accent.png');
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             z-index: -1;
         }
