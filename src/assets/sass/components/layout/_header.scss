@@ -18,8 +18,10 @@ header {
         }
 
         .header-cta-container {
-            top: 50%;
-            transform: translateY(-50%);
+            @media screen and (min-width: $tablet-breakpoint){
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
 
         .logo {
@@ -92,32 +94,52 @@ header {
 
     .content-container {
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            display: block;
+        }
     }
 
     .header-cta-container {
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translateY(-25%);
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        transition: top 0.3s ease, transform 0.3s ease;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateY(-25%);
+            transition: top 0.3s ease, transform 0.3s ease;
+        }
     }
 
     .logo {
         display: block;
-        max-width: 9.25rem;
-        max-height: 3.125rem;
+        max-width: 7.125rem;
+        max-height: 2.5rem;
         transition: max-width 0.3s ease, max-height 0.3s ease;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            max-width: 9.25rem;
+            max-height: 3.125rem;
+        }
 
         img {
             display: block;
             width: 100%;
             height: 100%;
-            max-width: 9.25rem;
-            max-height: 3.125rem;
+            max-width: 7.125rem;
+            max-height: 2.5rem;
             transition: max-width 0.3s ease, max-height 0.3s ease;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                max-width: 9.25rem;
+                max-height: 3.125rem;
+            }
         }
     }
 
