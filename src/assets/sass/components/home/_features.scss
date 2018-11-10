@@ -2,7 +2,7 @@ $feature-gutter: 0.625rem;
 
 .features {
     position: relative;
-    margin-top: 6.25rem;
+    margin-top: $mobile-section-space;
 
     @media screen and (min-width: $tablet-breakpoint){
         margin-top: 14.75rem;

@@ -1,6 +1,6 @@
 .simple-cta {
     text-align: center;
-    @include spacing(padding, top bottom, 6.25rem);
+    @include spacing(padding, top bottom, $mobile-section-space);
 
     @media screen and (min-width: $tablet-breakpoint){
         @include spacing(padding, top bottom, 6.875rem);

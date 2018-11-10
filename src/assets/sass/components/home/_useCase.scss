@@ -3,7 +3,7 @@ $offset-bottom: 2.25rem;
 
 .use-case {
     background-color: $input-background;
-    @include spacing(padding, top bottom, 6.25rem);
+    @include spacing(padding, top bottom, $mobile-section-space);
 
     @media screen and (min-width: $tablet-breakpoint){
         margin-top: $offset-top;
@@ -12,7 +12,7 @@ $offset-bottom: 2.25rem;
     }
 
     .use-case-option {
-        padding-bottom: 4rem;
+        padding-bottom: $mobile-block-space;
 
         @media screen and (min-width: $tablet-breakpoint){
             position: relative;

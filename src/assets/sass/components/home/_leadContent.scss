@@ -1,6 +1,6 @@
 .lead-content {
     padding-top: 2.25rem;
-    padding-bottom: 6.25rem;
+    padding-bottom: $mobile-section-space;
 
     @media screen and (min-width: $tablet-breakpoint){
         @include spacing(padding, top bottom, 5rem);
