@@ -1,6 +1,6 @@
 .sidebar-container {
     padding-top: 2rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: $mobile-section-space;
 
     @media screen and (min-width: $tablet-breakpoint){
         display: flex;

@@ -1,16 +1,36 @@
 .accordion {
-    padding-bottom: 3.75rem;
+    padding-bottom: 5rem;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        padding-bottom: 3.75rem;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            padding-bottom: 3.75rem;
+        }
+    }
 
     & ~ .accordion {
-        padding-top: 3.75rem;
+        padding-top: 5rem;
         border-top: 1px solid $grey;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            padding-top: 3.75rem;
+        }
     }
 
     h3 {
         @include set-font(secondary);
         font-size: 1.5rem;
         line-height: 2.25rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            margin-bottom: 2.5rem;
+        }
     }
 
     p {
