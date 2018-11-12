@@ -118,7 +118,45 @@ export default {
   methods: {
     setActive: function(id) {
       this.activeSection = id;
+    },
+    getTopPosition: function(section) {
+      const sectionPosition = section.getBoundingClientRect();
+      const header = document.querySelector("header");
+      const sectionTop = sectionPosition.top - header.offsetHeight - 51;
+
+      return Math.round(sectionTop);
+    },
+    setActiveNavigation: function() {
+      if (window.innerWidth >= 768) {
+        const sections = document.querySelectorAll(".sidebar-section");
+        let triggerPoint = 0;
+        let activeID = this.activeSection;
+
+        sections.forEach((section, index) => {
+          let sectionTop = this.getTopPosition(section);
+
+          if (sectionTop <= triggerPoint) {
+            if (index !== sections.length - 1) {
+              let nextSectionTop = this.getTopPosition(sections[index + 1]);
+
+              if (nextSectionTop < 0) {
+                return;
+              }
+            }
+
+            activeID = section.id;
+          }
+        });
+
+        this.setActive(activeID);
+      }
     }
+  },
+  created() {
+    window.addEventListener("scroll", this.setActiveNavigation);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.setActiveNavigation);
   }
 };
 </script>
