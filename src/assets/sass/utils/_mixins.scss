@@ -13,13 +13,13 @@
     background: linear-gradient(to right, $left 0%, $right 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-@mixin set-font($font-family, $font-weight: regular){
+@mixin set-font($font-family, $font-weight: regular) {
     $font : map-get(map-get($fonts, $font-family), $font-weight);
     font-family: map-get($font, font-family);
     font-weight: map-get($font, font-weight);
 }
 
-@mixin spacing($property-name, $position, $value){
+@mixin spacing($property-name, $position, $value) {
     @if($position == all){
         #{$property-name}: $value;
     }
@@ -32,7 +32,7 @@
     }
 }
 
-@mixin invisible{
+@mixin invisible {
     position: absolute;
     top: -625rem;
     left: -625rem;
@@ -40,4 +40,47 @@
     visibility: hidden;
     width: 0 !important;
     height: 0 !important;
+}
+
+@mixin line-hover {
+    display: block;
+    position: relative;
+    line-height: 1;
+    overflow: hidden;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.3125rem;
+        background-color: $grey;
+        z-index: -1;
+    }
+
+    &::after {
+        background-color: $yellow;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover, &:focus {
+        &::after {
+            transform: translateX(0);
+        }
+    }
+}
+
+@mixin cta-link {
+    display: flex;
+    align-items: center;
+    color: $legend-colour;
+    font-size: 1rem;
+    line-height: 1;
+
+    &::after {
+        content: ">";
+        padding-left: 0.625rem;
+    }
 }

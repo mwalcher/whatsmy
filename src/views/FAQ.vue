@@ -3,16 +3,30 @@
         <div class="container">
             <Sidebar
                 :navigation="sections"
+                :activeSection="activeSection"
+                @setActive="setActive"
             >
-                <SimpleHero
-                    title="Frequently Asked Questions"
-                />
+                <template slot="mobile-hero">
+                    <SimpleHero
+                        titleTop="Frequently"
+                        titleBottom="Asked Questions"
+                    />
+                </template>
+
+                <div class="desktop-hero">
+                    <SimpleHero
+                        title="Frequently Asked Questions"
+                    />
+                </div>
+
                 <AccordionList
                     v-for="(section, index) in sections"
                     :key="index"
                     :id="section.anchor"
                     :title="section.title"
                     :accordions="section.accordions"
+                    :class="{active : activeSection === section.anchor}"
+                    class="sidebar-section"
                 />
             </Sidebar>
         </div>
@@ -33,6 +47,7 @@ export default {
   },
   data() {
     return {
+      activeSection: "section1",
       sections: [
         {
           anchor: "section1",
@@ -99,6 +114,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    setActive: function(id) {
+      this.activeSection = id;
+    }
   }
 };
 </script>

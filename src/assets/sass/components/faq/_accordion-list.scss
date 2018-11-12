@@ -1,13 +1,17 @@
 .accordion-list {
     &:last-child {
         .accordion-section {
-            margin-bottom: 0;
-            border-bottom: 0;
+            @media screen and (min-width: $tablet-breakpoint){
+                margin-bottom: 0;
+                border-bottom: 0;
+            }
         }
     }
 
     .accordion-section {
-        margin-bottom: 6rem;
-        border-bottom: 1px solid $grey;
+        @media screen and (min-width: $tablet-breakpoint){
+            margin-bottom: 6rem;
+            border-bottom: 1px solid $grey;
+        }
     }
 }

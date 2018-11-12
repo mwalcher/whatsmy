@@ -1,41 +1,137 @@
 .sidebar-container {
-    padding-top: 4.5rem;
-    padding-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
 
     @media screen and (min-width: $tablet-breakpoint){
         display: flex;
+        padding-top: 4.5rem;
+        padding-bottom: 5rem;
     }
 
-    .sidebar {
+    .mobile-hero {
+        @media screen and (min-width: $tablet-breakpoint){
+            display: none;
+        }
+
+        .simple-hero {
+            padding-bottom: $mobile-section-space;
+
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+
+                span {
+                    display: block;
+
+                    &:first-child {
+                        color: $primary-colour;
+                    }
+                }
+            }
+        }
+    }
+
+    .desktop-hero {
         display: none;
 
         @media screen and (min-width: $tablet-breakpoint){
-            position: relative;
             display: block;
+        }
+    }
+
+    .sidebar {
+        padding-bottom: $mobile-section-space;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            position: relative;
             flex: 1 1 50%;
+            padding-bottom: 0;
         }
 
         nav {
-            position: absolute;
-            top: 0;
-            left: 0;
+            @media screen and (min-width: $tablet-breakpoint){
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
 
             &.navFixed {
-                position: fixed;
-                top: $header-height + 3.75rem;
+                @media screen and (min-width: $tablet-breakpoint){
+                    position: fixed;
+                    top: $header-height + 3.75rem;
+                }
             }
 
             &.navBottom {
-                top: auto;
-                bottom: 3.75rem;
+                @media screen and (min-width: $tablet-breakpoint){
+                    top: auto;
+                    bottom: 3.75rem;
+                }
+            }
+
+            h2 {
+                @include set-font(primary, bold);
+                font-size: 1rem;
+                line-height: 1;
+                margin-bottom: 1.25rem;
+
+                @media screen and (min-width: $tablet-breakpoint){
+                    display: none;
+                }
             }
 
             ul {
                 li {
-                    @include spacing(padding, top bottom, 1.5rem);
+                    width: 100%;
+
+                    @media screen and (min-width: $tablet-breakpoint){
+                        width: auto;
+                        @include spacing(padding, top bottom, 1.5rem);
+                    }
 
                     &:last-child {
-                        padding-bottom: 0;
+                        @media screen and (min-width: $tablet-breakpoint){
+                            padding-bottom: 0;
+                        }
+                    }
+
+                    .nav-link {
+                        color: $throwback-blue;
+                        padding: 0.875rem 1.125rem;
+                        transition: color 0.3s ease, background-color 0.3s ease;
+
+                        @media screen and (min-width: $tablet-breakpoint){
+                            color: inherit;
+                            padding: 0;
+                            transition: none;
+                            @include cta-link;
+                            @include line-hover;
+                        }
+
+                        &.active {
+                            color: $white;
+                            background-color: $throwback-blue;
+
+                            @media screen and (min-width: $tablet-breakpoint){
+                                color: inherit;
+                                background-color: transparent;
+                            }
+
+                            &::after {
+                                @media screen and (min-width: $tablet-breakpoint){
+                                    transform: translateX(0);
+                                }
+                            }
+                        }
+
+                        span {
+                            display: none;
+
+                            @media screen and (min-width: $tablet-breakpoint){
+                                display: inline;
+                                padding-left: 0.625rem;
+                            }
+                        }
                     }
                 }
             }
@@ -43,8 +139,31 @@
     }
 
     .sidebar-content {
+        position: relative;
+
         @media screen and (min-width: $tablet-breakpoint){
+            position: static;
             flex: 1 1 50%;
+        }
+
+        .sidebar-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: -1;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                position: static;
+                opacity: 1;
+                z-index: auto;
+            }
+
+            &.active {
+                position: static;
+                opacity: 1;
+                z-index: auto;
+            }
         }
     }
 }

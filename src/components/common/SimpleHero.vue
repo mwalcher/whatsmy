@@ -8,6 +8,10 @@
                 />
             </div>
             <h1 v-if="title">{{title}}</h1>
+            <h1 v-if="titleTop && titleBottom">
+                <span>{{titleTop}}</span>
+                <span>{{titleBottom}}</span>
+            </h1>
             <p v-if="content">{{content}}</p>
             <router-link
                 v-if="buttonLink && buttonText && buttonTitle"
@@ -27,6 +31,8 @@ export default {
   name: "SimpleHero",
   props: {
     title: String,
+    titleTop: String,
+    titleBottom: String,
     content: String,
     buttonLink: String,
     buttonText: String,

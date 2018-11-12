@@ -1,7 +1,12 @@
 <template>
     <div class="sidebar-container">
+        <div class="mobile-hero">
+            <slot name="mobile-hero"></slot>
+        </div>
+
         <div class="sidebar">
             <nav class="sidebar-navigation" :class="{navFixed, navBottom}">
+                <h2>Filter by tier:</h2>
                 <ul>
                     <li
                         v-for="(navItem) in navigation"
@@ -9,8 +14,10 @@
                     >
                         <a
                             :href="`#${navItem.anchor}`"
+                            @click="$emit('setActive', navItem.anchor)"
                             :title="navItem.title"
-                            class="cta-link line-hover"
+                            :class="{active : activeSection === navItem.anchor}"
+                            class="nav-link"
                         >{{navItem.title}}<span>></span></a>
                     </li>
                 </ul>
@@ -29,6 +36,10 @@ export default {
   props: {
     navigation: {
       type: Array,
+      required: true
+    },
+    activeSection: {
+      type: String,
       required: true
     }
   },

@@ -96,52 +96,11 @@ nav {
 }
 
 .line-hover {
-    display: block;
-    position: relative;
-    line-height: 1;
-    overflow: hidden;
-
-    &::before, &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0.3125rem;
-        background-color: $grey;
-        z-index: -1;
-    }
-
-    &::after {
-        background-color: $yellow;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-    }
-
-    &:hover, &:focus {
-        &::after {
-            transform: translateX(0);
-        }
-    }
+    @include line-hover;
 }
 
 .cta-link {
-    display: flex;
-    align-items: center;
-    color: $legend-colour;
-    font-size: 1rem;
-    line-height: 1;
-
-    &::after {
-        content: ">";
-        padding-left: 0.625rem;
-    }
-
-    &.line-hover {
-        span {
-            padding-left: 0.625rem;
-        }
-    }
+    @include cta-link;
 }
 
 %label {
