@@ -13,14 +13,17 @@ $feature-gutter: 0.625rem;
             background-image: url('./assets/images/large-dot-accent.png');
             background-repeat: no-repeat;
             background-size: 21.25rem;
-            background-position: top right;
+            background-position: top right $container-gutter;
         }
     }
 
     .content-container {
         position: relative;
-        max-width: 36.25rem;
         z-index: 1;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            max-width: calc(100% * (2/3));
+        }
 
         h3 {
             color: $red;
@@ -88,7 +91,15 @@ $feature-gutter: 0.625rem;
 
         img {
             width: auto;
-            height: 45.5rem;
+            height: 52.5rem;
+
+            @media screen and (min-width: $laptop-breakpoint){
+                height: 45.5rem;
+            }
+
+            @media screen and (min-width: $desktop-breakpoint){
+                height: 40rem;
+            }
         }
     }
 }
