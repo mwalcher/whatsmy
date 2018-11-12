@@ -1,20 +1,39 @@
 .hero {
     .hero-content {
-        position: relative;
-        padding-top: 2rem;
-
         @media screen and (min-width: $tablet-breakpoint){
-            padding-top: 5.25rem;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        @media screen and (min-width: $laptop-breakpoint){
+            padding-left: 4.5rem;
+            padding-right: 3.375rem;
+            padding-bottom: 4.75rem;
+        }
+
+        .content-container, .image-container {
+            position: relative;
+            z-index: 1;
         }
 
         .content-container {
             text-align: center;
+            padding-top: 2rem;
             padding-bottom: 4.375rem;
 
             @media screen and (min-width: $tablet-breakpoint){
+                flex: 1 1 60%;
                 text-align: left;
-                padding-left: 4.5rem;
-                padding-bottom: 2.25rem;
+                padding-bottom: 0;
+            }
+
+            @media screen and (min-width: $laptop-breakpoint){
+                padding-top: 5.25rem;
             }
 
             h1 {
@@ -30,26 +49,36 @@
             }
         }
 
+        .image-container {
+            box-shadow: $image-box-shadow;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                flex: 1 1 40%;
+            }
+        }
+
         .hero-gradient {
             display: none;
 
             @media screen and (min-width: $tablet-breakpoint){
                 display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5rem;
                 background-image: url('./assets/images/homepage-header.png');
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
+            }
+
+            @media screen and (min-width: $laptop-breakpoint){
                 height: 15.875rem;
             }
-        }
 
-        .image-container {
-            @media screen and (min-width: $tablet-breakpoint){
-                position: absolute;
-                top: 0;
-                right: 3.25rem;
-                max-width: 18.75rem;
-                box-shadow: 10px 10px 40px -20px rgba($ocean-blue,0.6);
+            @media screen and (min-width: $desktop-breakpoint){
+                height: 22rem;
             }
         }
     }

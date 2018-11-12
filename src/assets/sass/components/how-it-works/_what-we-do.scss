@@ -31,7 +31,7 @@
                 left: 6rem;
                 transform: translateY(-50%);
                 max-width: 25.5rem;
-                box-shadow: 10px 10px 40px -20px rgba($ocean-blue,0.6);
+                box-shadow: $image-box-shadow;
 
                 img {
                     height: 16.625rem;

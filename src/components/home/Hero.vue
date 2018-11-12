@@ -17,14 +17,14 @@
                     </router-link>
                 </div>
 
-                <div class="hero-gradient"/>
-
                 <div class="image-container">
                     <img
                         :src="require(`@/assets/images/${imageSrc}`)"
                         :alt="imageAlt"
                     />
                 </div>
+
+                <div class="hero-gradient"/>
             </div>
         </div>
     </section>
