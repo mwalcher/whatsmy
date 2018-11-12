@@ -1,40 +1,45 @@
-$contact-container-width: 26.75rem;
-
 main.contact {
     @import'../components/contact/form';
 
-    padding-bottom: 3.875rem;
+    padding-bottom: 2rem;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        padding-bottom: 3.875rem;
+    }
+
+    & > .container {
+        @include spacing(padding, left right, $container-gutter-small);
+    }
 
     .page-content {
-        position: relative;
-        max-width: $contact-container-width;
-        margin-left: auto;
-
-        @media screen and (min-width: $desktop-breakpoint){
-            position: static;
+        @media screen and (min-width: $tablet-breakpoint){
+            max-width: 50%;
+            margin-left: auto;
         }
     }
 
     .simple-hero {
-        padding-bottom: 8.875rem;
+        @media screen and (min-width: $tablet-breakpoint){
+            padding-bottom: 8.875rem;
+        }
 
         .image-container {
-            position: absolute;
-            top: 0;
-            right: $contact-container-width + 4.625rem;
-            width: 28rem;
+            display: none;
 
-            @media screen and (min-width: $desktop-breakpoint){
+            @media screen and (min-width: $tablet-breakpoint){
+                display: block;
+                position: absolute;
                 top: $header-height;
                 left: 0;
-                right: auto;
+                width: 50%;
+                padding-right: 4.625rem;
             }
 
             &::before {
                 content: '';
                 position: absolute;
                 bottom: -5.375rem;
-                right: -2rem;
+                right: 2.625rem;
                 width: 21.25rem;
                 height: 10.125rem;
                 background-image: url('./assets/images/large-dot-accent.png');

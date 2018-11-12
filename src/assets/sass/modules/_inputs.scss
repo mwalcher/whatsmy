@@ -35,5 +35,9 @@ textarea{
 }
 
 fieldset {
-    padding-bottom: 5rem;
+    padding-bottom: $mobile-block-space;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        padding-bottom: 5rem;
+    }
 }

@@ -1,6 +1,11 @@
 .simple-hero {
-    padding-top: 4.5rem;
-    padding-bottom: 5.75rem;
+    padding-top: $mobile-hero-space;
+    padding-bottom: $mobile-block-space;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        padding-top: 4.5rem;
+        padding-bottom: 5.75rem;
+    }
 
     h1 {
         color: $red;

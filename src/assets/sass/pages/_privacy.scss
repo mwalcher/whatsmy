@@ -1,5 +1,7 @@
 main.privacy {
     .container {
+        @include spacing(padding, left right, $container-gutter-small);
+
         @media screen and (min-width: $tablet-breakpoint){
             max-width: calc(#{$phone-container});
         }
@@ -8,7 +10,11 @@ main.privacy {
     .simple-hero {
         h1 {
             color: $red;
-            margin-bottom: 5rem;
+            margin-bottom: $mobile-block-space;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                margin-bottom: 5rem;
+            }
         }
     }
 

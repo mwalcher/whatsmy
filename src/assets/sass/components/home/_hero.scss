@@ -23,7 +23,7 @@
 
         .content-container {
             text-align: center;
-            padding-top: 2rem;
+            padding-top: $mobile-hero-space;
             padding-bottom: 4.375rem;
 
             @media screen and (min-width: $tablet-breakpoint){

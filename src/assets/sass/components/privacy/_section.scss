@@ -1,9 +1,17 @@
 .privacy-section {
-    padding-bottom: 5.75rem;
+    padding-bottom: $mobile-block-space;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        padding-bottom: 5.75rem;
+    }
 
     p {
         & ~ p {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                margin-top: 2rem;
+            }
         }
     }
 }
