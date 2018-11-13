@@ -1,6 +1,8 @@
+$steps-grid-gutter: 1.5rem;
+
 .what-you-do {
     background-color: $input-background;
-    @include spacing(padding, top bottom, 6.25rem);
+    @include spacing(padding, top bottom, $mobile-section-space);
 
     .content-container {
         max-width: 31.25rem;
@@ -13,19 +15,21 @@
     }
 
     .steps-list {
+        margin-bottom: -$steps-grid-gutter;
+
         @media screen and (min-width: $phone-breakpoint){
             display: flex;
             justify-content: space-between;
-            @include spacing(margin, left right, -1.5rem);
+            @include spacing(margin, left right, -$steps-grid-gutter);
         }
 
         .step {
-            padding-bottom: 1.5rem;
+            padding-bottom: $steps-grid-gutter;
 
             @media screen and (min-width: $phone-breakpoint){
                 flex: 0 1 calc(100% / 3);
                 max-width: calc(100% / 3);
-                @include spacing(padding, left right, 1.5rem);
+                @include spacing(padding, left right, $steps-grid-gutter);
                 padding-bottom: 0;
             }
 
