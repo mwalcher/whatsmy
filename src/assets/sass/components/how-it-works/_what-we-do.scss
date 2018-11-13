@@ -1,6 +1,10 @@
-.what-we-do{
-    padding-top: 10rem;
-    padding-bottom: 3rem;
+.what-we-do {
+    padding-top: $mobile-section-space;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        padding-top: 10rem;
+        padding-bottom: 3rem;
+    }
 
     .what-we-do-content {
         @media screen and (min-width: $tablet-breakpoint){
@@ -14,35 +18,64 @@
             @media screen and (min-width: $tablet-breakpoint){
                 display: block;
                 position: relative;
-                flex: 1 1 auto;
+                flex: 1 1 57.5%;
             }
 
             .back-image {
-                max-width: 17.5rem;
+                @media screen and (min-width: $tablet-breakpoint){
+                    position: relative;
+                    max-width: 55%;
+                }
 
-                img {
-                    height: 24rem;
+                &::after {
+                    @media screen and (min-width: $tablet-breakpoint){
+                        content: '';
+                        position: absolute;
+                        bottom: 6rem;
+                        right: 6rem;
+                        transform: translateY(100%);
+                        width: 21.25rem;
+                        height: 13rem;
+                        background-image: url('./assets/images/large-dot-accent.png');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        z-index: -1;
+                    }
                 }
             }
 
             .front-image {
-                position: absolute;
-                top: 50%;
-                left: 6rem;
-                transform: translateY(-50%);
-                max-width: 25.5rem;
-                box-shadow: $image-box-shadow;
+                @media screen and (min-width: $tablet-breakpoint){
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    max-width: 80%;
+                    box-shadow: $image-box-shadow;
+                }
 
-                img {
-                    height: 16.625rem;
+                &::after {
+                    @media screen and (min-width: $tablet-breakpoint){
+                        content: '';
+                        position: absolute;
+                        top: 1.25rem;
+                        left: 50%;
+                        transform: translate(-50%, -100%);
+                        width: 4.875rem;
+                        height: 12.5rem;
+                        background-image: url('./assets/images/line-accent.png');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                    }
                 }
             }
         }
 
         .content-container {
             @media screen and (min-width: $tablet-breakpoint){
-                flex: 1 1 23.25rem;
-                max-width: 23.25rem;
+                flex: 1 1 42.5%;
                 padding-left: 5.75rem;
             }
 
