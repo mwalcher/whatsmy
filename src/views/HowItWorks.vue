@@ -7,7 +7,7 @@
             buttonLink="/"
             buttonText="Get Started"
             buttonTitle="Get Started"
-            imageSrc="homepage-hero-cactus.png"
+            imageSrc="how-it-works-hero-cactus.png"
             imageAlt="Hero Image"
         />
         <Partners

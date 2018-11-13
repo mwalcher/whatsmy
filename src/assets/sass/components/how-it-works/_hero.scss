@@ -1,18 +1,24 @@
-$how-it-works-image-width: 28.125rem;
-$how-it-works-image-height: 29rem;
 $gradient-space: 3.5rem;
 
 .hero {
-    position: relative;
-    min-height: $how-it-works-image-height;
-
     .hero-content {
-        position: relative;
-        padding-top: 4.125rem;
-        z-index: 1;
+        @media screen and (min-width: $tablet-breakpoint){
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
 
         .content-container {
-            max-width: 21.5rem;
+            text-align: center;
+            padding-top: $mobile-hero-space;
+            padding-bottom: 4.375rem;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                max-width: 21.5rem;
+                text-align: left;
+                padding-top: 4.125rem;
+                padding-bottom: 6.25rem;
+            }
 
             h1 {
                 color: $red;
@@ -30,40 +36,56 @@ $gradient-space: 3.5rem;
     }
 
     .image-container {
-        position: absolute;
-        top: 0;
-        right: 0;
-        max-width: $how-it-works-image-width;
+        @media screen and (min-width: $tablet-breakpoint){
+            position: relative;
+            width: 100%;
+            max-width: calc(50% + (((100vw - (#{$tablet-container})) / 2) + #{$container-gutter}));
+            margin-right: calc(-1 * (((100vw - (#{$tablet-container})) / 2) + #{$container-gutter}));
+            padding-left: $gradient-space;
+        }
 
-        img {
-            height: $how-it-works-image-height;
+        @media screen and (min-width: $laptop-breakpoint){
+            max-width: calc(50% + (((100vw - (#{$laptop-container})) / 2) + #{$container-gutter}));
+            margin-right: calc(-1 * (((100vw - (#{$laptop-container})) / 2) + #{$container-gutter}));
+        }
+
+        @media screen and (min-width: $desktop-breakpoint){
+            max-width: calc(50% + (((100vw - (#{$desktop-container})) / 2) + #{$container-gutter}));
+            margin-right: calc(-1 * (((100vw - (#{$desktop-container})) / 2) + #{$container-gutter}));
         }
 
         &::after {
-            content: '';
-            position: absolute;
-            top: -2.5rem;
-            right: $how-it-works-image-width;
-            transform: translateX(40%);
-            width: 14.625rem;
-            height: 11.25rem;
-            background-image: url('./assets/images/large-dot-accent.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            @media screen and (min-width: $tablet-breakpoint){
+                content: '';
+                position: absolute;
+                top: -2.25rem;
+                right: 100%;
+                transform: translateX(65%);
+                width: 14.625rem;
+                height: 11.25rem;
+                background-image: url('./assets/images/large-dot-accent.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
         }
     }
 
     .hero-gradient {
-        position: absolute;
-        bottom: -$gradient-space;
-        right: 0;
-        width: $how-it-works-image-width + $gradient-space;
-        height: 15.875rem;
-        background-image: url('./assets/images/homepage-header.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        z-index: -1;
+        display: none;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            display: block;
+            position: absolute;
+            bottom: -$gradient-space;
+            right: 0;
+            width: 100%;
+            height: 15.875rem;
+            background-image: url('./assets/images/homepage-header.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
     }
 }

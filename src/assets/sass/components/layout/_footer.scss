@@ -104,16 +104,17 @@ footer {
     }
 
     .footer-navigation {
-        flex: 1 1 45%;
-        align-items: center;
-        background-color: $primary-colour;
-        background-image: url('./assets/images/whatsmy-logo-icon-light.svg');
-        background-repeat: no-repeat;
-        background-size: 3.875rem 3.125rem;
-        background-position: bottom 2.5rem right 2.5rem;
+        display: none;
 
-        @media screen and (max-width: $tablet-breakpoint - 0.0625rem){
-            display: none;
+        @media screen and (min-width: $tablet-breakpoint){
+            display: flex;
+            flex: 1 1 45%;
+            align-items: center;
+            background-color: $primary-colour;
+            background-image: url('./assets/images/whatsmy-logo-icon-light.svg');
+            background-repeat: no-repeat;
+            background-size: 3.875rem 3.125rem;
+            background-position: bottom 2.5rem right 2.5rem;
         }
 
         nav {

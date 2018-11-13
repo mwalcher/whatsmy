@@ -17,17 +17,16 @@
                         {{buttonText}}
                     </router-link>
                 </div>
+
+                <div class="image-container">
+                    <img
+                        :src="require(`@/assets/images/${imageSrc}`)"
+                        :alt="imageAlt"
+                    />
+                    <div class="hero-gradient"/>
+                </div>
             </div>
         </div>
-
-        <div class="image-container">
-            <img
-                :src="require(`@/assets/images/${imageSrc}`)"
-                :alt="imageAlt"
-            />
-        </div>
-
-        <div class="hero-gradient"/>
     </section>
 </template>
 

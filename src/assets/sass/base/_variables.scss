@@ -5,12 +5,16 @@ $laptop-breakpoint  : 62rem;  // 992px
 $desktop-breakpoint : 75rem;  // 1200px
 
 /* Container */
-$container-gutter       : 1.875rem;
-$container-gutter-small : 1rem;
-$phone-container        : 33.75rem + (#{$container-gutter} * 2);
-$tablet-container       : 45rem + (#{$container-gutter} * 2);
-$laptop-container       : 60rem + (#{$container-gutter} * 2);
-$desktop-container      : 71.25rem + (#{$container-gutter} * 2);
+$container-gutter        : 1.875rem;
+$container-gutter-small  : 1rem;
+$phone-container-width   : 33.75rem;
+$tablet-container-width  : 45rem;
+$laptop-container-width  : 60rem;
+$desktop-container-width : 71.25rem;
+$phone-container         : #{$phone-container-width} + (#{$container-gutter} * 2);
+$tablet-container        : #{$tablet-container-width} + (#{$container-gutter} * 2);
+$laptop-container        : #{$laptop-container-width} + (#{$container-gutter} * 2);
+$desktop-container       : #{$desktop-container-width} + (#{$container-gutter} * 2);
 
 /* Globals */
 $global-font-size: 1rem;
