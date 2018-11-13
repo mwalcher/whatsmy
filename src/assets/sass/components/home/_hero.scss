@@ -24,7 +24,7 @@
         .content-container {
             text-align: center;
             padding-top: $mobile-hero-space;
-            padding-bottom: 4.375rem;
+            padding-bottom: $mobile-block-space;
 
             @media screen and (min-width: $tablet-breakpoint){
                 flex: 1 1 60%;

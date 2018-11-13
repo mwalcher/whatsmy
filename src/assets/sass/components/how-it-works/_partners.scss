@@ -1,17 +1,28 @@
+$partners-grid-gutter: 2.5rem;
+
 .partners {
-    padding-top: 14.25rem;
-    padding-bottom: 8.75rem;
+    padding-top: 2.25rem;
+    padding-bottom: $mobile-section-space;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        padding-top: 14.25rem;
+        padding-bottom: 8.75rem;
+    }
 
     .container {
-        position: relative;
+        @media screen and (min-width: $tablet-breakpoint){
+            position: relative;
+        }
 
         &::before {
-            content: '';
-            position: absolute;
-            top: -14.25rem;
-            left: $container-gutter;
-            height: 24.25rem;
-            border-left: 1px solid $grey;
+            @media screen and (min-width: $tablet-breakpoint){
+                content: '';
+                position: absolute;
+                top: -14.25rem;
+                left: $container-gutter;
+                height: 24.25rem;
+                border-left: 1px solid $grey;
+            }
         }
     }
 
@@ -19,17 +30,29 @@
         text-align: center;
         max-width: 36.375rem;
         @include spacing(margin, left right, auto);
-        padding-bottom: 4.875rem;
+        padding-bottom: $mobile-block-space;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            padding-bottom: 4.875rem;
+        }
     }
 
     .partner-list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include spacing(margin, left right bottom, -2.5rem);
+        margin-bottom: -$partners-grid-gutter;
+
+        @media screen and (min-width: $phone-breakpoint){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include spacing(margin, left right, -$partners-grid-gutter);
+        }
 
         .partner {
-            @include spacing(padding, left right bottom, 2.5rem);
+            padding-bottom: $partners-grid-gutter;
+
+            @media screen and (min-width: $phone-breakpoint){
+                @include spacing(padding, left right, $partners-grid-gutter);
+            }
 
             .image-container {
                 max-width: 11.25rem;
