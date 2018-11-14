@@ -1,23 +1,29 @@
 .fast-facts {
-    padding-top: 7.5rem;
-    padding-bottom: 6rem;
+    padding-top: 2.25rem;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        padding-top: 7.5rem;
+    }
 
     .fast-facts-container {
         background-color: $input-background;
-        @include spacing(padding, top bottom, 6.25rem);
+        @include spacing(padding, top bottom, $mobile-section-space);
     }
 
     .facts-list {
-        @media screen and (min-width: $phone-breakpoint){
+        margin-bottom: -$mobile-block-space;
+
+        @media screen and (min-width: $tablet-breakpoint){
             display: flex;
             justify-content: space-between;
             @include spacing(margin, left right, -1rem);
+            margin-bottom: 0;
         }
 
         .fact {
-            padding-bottom: 1.5rem;
+            padding-bottom: $mobile-block-space;
 
-            @media screen and (min-width: $phone-breakpoint){
+            @media screen and (min-width: $tablet-breakpoint){
                 flex: 0 1 calc(100% / 3);
                 max-width: calc(100% / 3);
                 @include spacing(padding, left right, 1rem);
@@ -30,7 +36,7 @@
                 line-height: 2rem;
                 margin-bottom: 1rem;
 
-                @media screen and (min-width: $phone-breakpoint){
+                @media screen and (min-width: $tablet-breakpoint){
                     margin-bottom: 2.25rem;
                 }
             }
