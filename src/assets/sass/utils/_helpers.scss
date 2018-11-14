@@ -7,19 +7,19 @@
     @include spacing(padding, left right, $container-gutter);
 
     @media screen and (min-width: $phone-breakpoint){
-        max-width: calc(#{$phone-container});
+        max-width: $phone-container;
     }
 
     @media screen and (min-width: $tablet-breakpoint){
-        max-width: calc(#{$tablet-container});
+        max-width: $tablet-container;
     }
 
     @media screen and (min-width: $laptop-breakpoint){
-        max-width: calc(#{$laptop-container});
+        max-width: $laptop-container;
     }
 
     @media screen and (min-width: $desktop-breakpoint){
-        max-width: calc(#{$desktop-container});
+        max-width: $desktop-container;
     }
 
     .container {

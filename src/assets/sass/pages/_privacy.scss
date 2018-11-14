@@ -3,7 +3,7 @@ main.privacy {
         @include spacing(padding, left right, $container-gutter-small);
 
         @media screen and (min-width: $tablet-breakpoint){
-            max-width: calc(#{$phone-container});
+            max-width: $phone-container;
         }
     }
 
