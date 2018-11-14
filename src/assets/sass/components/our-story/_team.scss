@@ -3,58 +3,75 @@ $team-gutter-size: 1.5rem;
 $team-max-width: 25rem + $team-gutter-size;
 
 .team {
-    position: relative;
+    padding-top: $mobile-section-space;
+
+    @media screen and (min-width: $tablet-breakpoint){
+        position: relative;
+        padding-top: 6rem;
+    }
 
     &::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: -0.25rem;
-        width: 21.25rem;
-        height: 15.75rem;
-        background-image: url('./assets/images/large-dot-accent.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        z-index: -1;
+        @media screen and (min-width: $tablet-breakpoint){
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: -0.25rem;
+            width: 21.25rem;
+            height: 15.75rem;
+            background-image: url('./assets/images/large-dot-accent.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            z-index: -1;
+        }
     }
 
     &::after {
-        content: '';
-        position: absolute;
-        bottom: 10.5rem;
-        right: -1rem;
-        width: 6.875rem;
-        height: 7.125rem;
-        background-image: url('./assets/images/stripe-accent.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        @media screen and (min-width: $tablet-breakpoint){
+            content: '';
+            position: absolute;
+            bottom: 10.5rem;
+            right: -1rem;
+            width: 6.875rem;
+            height: 7.125rem;
+            background-image: url('./assets/images/stripe-accent.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
     }
 
     .team-list {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-left: -$team-gutter-size;
-        margin-right: -$team-gutter-size;
+        @media screen and (min-width: $tablet-breakpoint){
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-left: -$team-gutter-size;
+            margin-right: -$team-gutter-size;
+        }
     }
 
     .team-card, .team-title {
-        flex: 0 1 50%;
-        max-width: $team-max-width;
-        padding-left: $team-gutter-size;
-        padding-right: $team-gutter-size;
+        @media screen and (min-width: $tablet-breakpoint){
+            flex: 0 1 50%;
+            max-width: $team-max-width;
+            padding-left: $team-gutter-size;
+            padding-right: $team-gutter-size;
+        }
     }
 
     .team-title {
         .title-container {
-            max-width: $team-image-size;
-            margin-left: auto;
+            @media screen and (min-width: $tablet-breakpoint){
+                max-width: $team-image-size;
+                margin-left: auto;
+            }
 
             .subtitle {
-                margin-bottom: 4rem;
+                @media screen and (min-width: $tablet-breakpoint){
+                    margin-bottom: 4rem;
+                }
             }
 
             h3 {
@@ -64,18 +81,32 @@ $team-max-width: 25rem + $team-gutter-size;
     }
 
     .team-card {
-        padding-bottom: 4.375rem;
+        max-width: $team-max-width;
+        @include spacing(margin, left right, auto);
+        padding-top: $mobile-block-space;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            padding-top: 0;
+            @include spacing(margin, left right, 0);
+            padding-bottom: 4.375rem;
+        }
 
         &:nth-child(2) {
-            margin-top: 4.875rem;
+            @media screen and (min-width: $tablet-breakpoint){
+                margin-top: 4.875rem;
+            }
         }
 
         &:nth-child(odd) {
-            margin-top: -17.75rem;
+            @media screen and (min-width: $tablet-breakpoint){
+                margin-top: -17.75rem;
+            }
         }
 
         &:last-child {
-            padding-bottom: 2.375rem;
+            @media screen and (min-width: $tablet-breakpoint){
+                padding-bottom: 2.375rem;
+            }
         }
 
         .image-container {
@@ -98,9 +129,13 @@ $team-max-width: 25rem + $team-gutter-size;
                 @include set-font(primary, bold);
                 font-size: 1.25rem;
                 line-height: 2rem;
-                width: 12.5rem;
+                width: 100%;
                 padding: 0.75rem 0 0.75rem 0.875rem;
                 white-space: nowrap;
+
+                @media screen and (min-width: $phone-breakpoint){
+                    width: 12.5rem;
+                }
 
                 span {
                     display: block;
@@ -126,9 +161,14 @@ $team-max-width: 25rem + $team-gutter-size;
         }
 
         .content-container {
-            position: relative;
-            top: -2.75rem;
-            margin-bottom: -2.75rem;
+            padding-top: 1rem;
+
+            @media screen and (min-width: $phone-breakpoint){
+                position: relative;
+                top: -2.75rem;
+                margin-bottom: -2.75rem;
+                padding-top: 0;
+            }
 
             h4 {
                 color: $red;
