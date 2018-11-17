@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <transition name="page-transition" mode="out-in">
+        <transition name="page-transition" mode="out-in" :duration="{ enter: 500, leave: 500 }">
             <router-view/>
         </transition>
     </div>

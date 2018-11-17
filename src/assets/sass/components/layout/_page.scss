@@ -14,13 +14,25 @@
 
 /* Page Transition */
 .page-transition-enter-active, .page-transition-leave-active {
-    transition: opacity 0.5s ease-in-out;
+    .line-transition {
+        transition: transform 0.5s ease-in-out;
+    }
 }
 
 .page-transition-enter, .page-transition-leave-to {
-    opacity: 0;
+    .line-transition {
+        transform: translateX(0);
+    }
 }
 
-.page-transition-enter-to, .page-transition-leave {
-    opacity: 1;
+.page-transition-enter-to {
+    .line-transition {
+        transform: translateX(100%);
+    }
+}
+
+.page-transition-leave {
+    .line-transition {
+        transform: translateX(-100%);
+    }
 }
