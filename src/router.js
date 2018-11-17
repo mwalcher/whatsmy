@@ -22,7 +22,11 @@ export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
   scrollBehavior() {
-    return { x: 0, y: 0 };
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve({ x: 0, y: 0 });
+      }, 500);
+    });
   },
   routes: [
     {
