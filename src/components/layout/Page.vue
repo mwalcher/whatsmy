@@ -9,7 +9,11 @@
             <slot></slot>
         </main>
         <Footer/>
-        <div class="yellow-gradient line-transition"/>
+        <div class="line-transition">
+            <div class="yellow-gradient line"/>
+            <div class="pink-gradient line"/>
+            <div class="blue-gradient line"/>
+        </div>
     </div>
 </template>
 
