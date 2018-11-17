@@ -2,18 +2,17 @@ input:not([type="submit"]):not([type="checkbox"]),
 textarea,
 select{
     display: block;
+    width: 100%;
     appearance: none;
     outline: none;
     cursor: pointer;
-
     color: $input-colour;
     background-color: $input-background;
-
     @include set-font(primary);
     font-size: $body-font-size;
     line-height: $body-line-height;
     padding: 0.8125rem;
-    width: 100%;
+    border-radius: 0;
 
     &::placeholder {
         color: rgba($input-colour, 0.5);
