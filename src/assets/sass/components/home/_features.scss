@@ -19,7 +19,7 @@ $feature-gutter: 0.625rem;
 
     .content-container {
         position: relative;
-        z-index: 1;
+        z-index: $content-layer;
 
         @media screen and (min-width: $tablet-breakpoint){
             max-width: calc(100% * (2/3));

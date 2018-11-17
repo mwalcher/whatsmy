@@ -21,3 +21,9 @@ $mobile-section-space: 6.25rem;
 $mobile-block-space: 4rem;
 $mobile-hero-space: 2rem;
 $image-box-shadow: 10px 10px 40px -20px rgba($ocean-blue, 0.6);
+
+/* Z-Index Layers */
+$background-layer: -1;
+$content-layer: 1;
+$header-layer: 2;
+$page-transition-layer: 3;

@@ -22,7 +22,7 @@ $team-max-width: 25rem + $team-gutter-size;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
-            z-index: -1;
+            z-index: $background-layer;
         }
     }
 

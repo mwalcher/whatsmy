@@ -1,5 +1,5 @@
 <template>
-    <main class="how-it-works">
+    <Page pageClass="how-it-works">
         <Hero
             titleTop="How It"
             titleBottom="Works"
@@ -36,10 +36,11 @@
             buttonText="Get Started"
             buttonTitle="Get Started"
         />
-    </main>
+    </Page>
 </template>
 
 <script>
+import Page from "@/components/layout/Page.vue";
 import Hero from "@/components/how-it-works/Hero.vue";
 import Partners from "@/components/how-it-works/Partners.vue";
 import WhatYouDo from "@/components/how-it-works/WhatYouDo.vue";
@@ -49,6 +50,7 @@ import SimpleCTA from "@/components/common/SimpleCTA.vue";
 export default {
   name: "how-it-works",
   components: {
+    Page,
     Hero,
     Partners,
     WhatYouDo,

@@ -1,5 +1,5 @@
 <template>
-    <main class="our-story">
+    <Page pageClass="our-story">
         <Hero
             titleTop="About"
             titleBottom="WhatsMy"
@@ -29,10 +29,11 @@
             buttonText="Sign Up For Free"
             buttonTitle="Sign Up For Free"
         />
-    </main>
+    </Page>
 </template>
 
 <script>
+import Page from "@/components/layout/Page.vue";
 import Hero from "@/components/our-story/Hero.vue";
 import FastFacts from "@/components/our-story/FastFacts.vue";
 import Team from "@/components/our-story/Team.vue";
@@ -41,6 +42,7 @@ import SimpleCTA from "@/components/common/SimpleCTA.vue";
 export default {
   name: "our-story",
   components: {
+    Page,
     Hero,
     FastFacts,
     Team,

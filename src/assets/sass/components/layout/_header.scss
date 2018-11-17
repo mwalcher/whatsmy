@@ -5,7 +5,7 @@ header {
     width: 100%;
     height: $header-height;
     border-bottom: 1px solid transparent;
-    z-index: 10;
+    z-index: $header-layer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 
     &.headerFixed {
@@ -35,22 +35,22 @@ header {
         }
     }
 
-    #app.navigationOpen & {
-        #menuToggle {
+    .navigationOpen & {
+        .menuToggle {
             &::before {
                 content: "Close";
             }
 
             .menuIcon {
                 span {
-                    top: 50%;
-
                     &:first-child {
+                        top: 50%;
                         transform: rotate(45deg) translateY(-50%);
                         margin-left: -1px;
                     }
 
                     &:last-child {
+                        top: 50%;
                         transform: rotate(-45deg) translateY(-50%);
                     }
                 }
@@ -88,7 +88,7 @@ header {
     .header-container {
         position: relative;
         @include spacing(padding, top bottom, 1.75rem);
-        z-index: 1;
+        z-index: $content-layer;
         transition: background-color 0.5s ease, padding 0.3s ease;
     }
 
@@ -151,7 +151,7 @@ header {
         }
     }
 
-    #menuToggle {
+    .menuToggle {
         display: flex;
         align-items: center;
 

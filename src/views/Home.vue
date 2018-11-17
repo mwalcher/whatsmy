@@ -1,5 +1,5 @@
 <template>
-    <main class="home">
+    <Page pageClass="home">
         <Hero
             titleTop="Values Change."
             titleBottom="Stay in the Know."
@@ -29,10 +29,11 @@
             buttonText="Sign Up For Free"
             buttonTitle="Sign Up For Free"
         />
-    </main>
+    </Page>
 </template>
 
 <script>
+import Page from "@/components/layout/Page.vue";
 import Hero from "@/components/home/Hero.vue";
 import LeadContent from "@/components/home/LeadContent.vue";
 import UseCase from "@/components/home/UseCase.vue";
@@ -42,6 +43,7 @@ import SimpleCTA from "@/components/common/SimpleCTA.vue";
 export default {
   name: "home",
   components: {
+    Page,
     Hero,
     LeadContent,
     UseCase,

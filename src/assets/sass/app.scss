@@ -4,35 +4,36 @@
 @import
 'base/normalize';
 
-//Vendors Styles
+// Vendors Styles
 
-//Base Styles
+// Base Styles
 @import
 'base/colors',
 'base/fonts',
 'base/variables';
 
-//Helpers
+// Helpers
 @import
 'utils/mixins',
 'utils/animations',
 'utils/helpers';
 
-//Modules
+// Modules
 @import
 'modules/typography',
 'modules/buttons',
 'modules/inputs';
 
-//Components
+// Components
 @import
 'components/layout/header',
 'components/layout/footer',
+'components/layout/page',
 'components/layout/sidebar',
 'components/common/simple-cta',
 'components/common/simple-hero';
 
-//Pages
+// Pages
 @import
 'pages/home',
 'pages/how-it-works',

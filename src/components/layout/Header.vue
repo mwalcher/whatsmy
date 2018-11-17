@@ -6,7 +6,7 @@
                     <img :src="require('@/assets/images/whatsmy-logo.svg')" alt="WhatsMy Logo">
                 </router-link>
                 <div class="header-cta-container">
-                    <button id="menuToggle" @click="$emit('toggleNavigation')">
+                    <button class="menuToggle" @click="$emit('toggleNavigation')">
                         <span class="menuIcon">
                             <span></span>
                             <span></span>

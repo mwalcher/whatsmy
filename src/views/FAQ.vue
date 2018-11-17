@@ -1,5 +1,5 @@
 <template>
-    <main class="faq">
+    <Page pageClass="faq">
         <div class="container">
             <Sidebar
                 :navigation="sections"
@@ -30,10 +30,11 @@
                 />
             </Sidebar>
         </div>
-    </main>
+    </Page>
 </template>
 
 <script>
+import Page from "@/components/layout/Page.vue";
 import Sidebar from "@/components/layout/Sidebar.vue";
 import SimpleHero from "@/components/common/SimpleHero.vue";
 import AccordionList from "@/components/faq/AccordionList.vue";
@@ -41,6 +42,7 @@ import AccordionList from "@/components/faq/AccordionList.vue";
 export default {
   name: "faq",
   components: {
+    Page,
     Sidebar,
     SimpleHero,
     AccordionList

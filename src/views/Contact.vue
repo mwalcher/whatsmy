@@ -1,5 +1,5 @@
 <template>
-    <main class="contact">
+    <Page pageClass="contact">
         <div class="container">
             <div class="page-content">
                 <SimpleHero
@@ -14,16 +14,18 @@
                 <ContactForm/>
             </div>
         </div>
-    </main>
+    </Page>
 </template>
 
 <script>
+import Page from "@/components/layout/Page.vue";
 import SimpleHero from "@/components/common/SimpleHero.vue";
 import ContactForm from "@/components/contact/ContactForm.vue";
 
 export default {
   name: "contact",
   components: {
+    Page,
     SimpleHero,
     ContactForm
   }

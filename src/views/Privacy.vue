@@ -1,5 +1,5 @@
 <template>
-    <main class="privacy">
+    <Page pageClass="privacy">
         <SimpleHero
             title="Privacy Policy"
             content="This Privacy Policy sets out Credsii’s approach to the collection, use and disclosure of personal info in connection with our business in Canada, including but not limited to personal information collected, used and disclosed when you access or use our Website."
@@ -10,16 +10,18 @@
             :title="section.title"
             :body="section.body"
         />
-    </main>
+    </Page>
 </template>
 
 <script>
+import Page from "@/components/layout/Page.vue";
 import SimpleHero from "@/components/common/SimpleHero.vue";
 import Section from "@/components/privacy/Section.vue";
 
 export default {
   name: "privacy",
   components: {
+    Page,
     SimpleHero,
     Section
   },
