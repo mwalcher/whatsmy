@@ -151,11 +151,18 @@ $team-max-width: 25rem + $team-gutter-size;
                 width: 3.5rem;
                 background-color: $white;
 
+                &:hover, &:focus {
+                    .icon {
+                        color: darken($throwback-blue, 15%);
+                    }
+                }
+
                 .icon {
                     display: block;
                     color: $throwback-blue;
                     font-size: 2rem;
                     transform: rotate(90deg);
+                    transition: color 0.3s ease;
                 }
             }
         }
