@@ -83,19 +83,24 @@ footer {
                         }
                     }
 
-                    input[type="submit"] {
+                    [type="submit"] {
                         @extend %button-reset;
                         @include set-font(primary, bold);
-                        color: $white;
-                        font-size: $body-font-size;
-                        line-height: $body-line-height;
                         width: 100%;
                         padding: 0.6875rem 1.125rem;
-                        background-color: $primary-colour;
-                        border: 0.125rem solid $white;
+                        border-color: $white;
+                        border-radius: 0;
 
                         @media screen and (min-width: $tablet-breakpoint){
                             width: auto;
+                        }
+
+                        &:hover, &:focus, &:active{
+                            color: $white;
+                        }
+
+                        &::after {
+                            z-index: $base-layer;
                         }
                     }
                 }

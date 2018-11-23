@@ -77,7 +77,7 @@ $checkbox-grid-gutter: 1.125rem;
     .submit-container {
         margin-top: 1rem;
 
-        input[type="submit"] {
+        [type="submit"] {
             display: block;
             margin-left: auto;
         }

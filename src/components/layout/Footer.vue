@@ -7,7 +7,9 @@
                         <p class="cta-title">Wondering what your home or vehicle is worth?</p>
                         <div class="micro-form">
                             <input type="email" autocomplete="email" placeholder="Enter your email address" />
-                            <input type="submit" value="Sign Up" />
+                            <button type="submit" class="button">
+                                <span>Sign Up</span>
+                            </button>
                         </div>
                     </form>
                 </div>

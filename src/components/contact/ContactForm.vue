@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="submit-container">
-                        <input class="button" type="submit" value="Get Started" />
+                        <button type="submit" class="button">Get Started</button>
                     </div>
                 </fieldset>
             </form>
