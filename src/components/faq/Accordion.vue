@@ -1,8 +1,8 @@
 <template>
-    <div class="accordion">
+    <div class="accordion" :class="{open : isOpen}">
         <h3>{{title}}</h3>
         <button class="cta-link" @click="toggleAccordion">View Answer</button>
-        <div class="accordion-content" :class="{open : isOpen}">
+        <div class="accordion-content">
             <div class="content-container">
                 <p
                     v-for="(content, index) in body"
