@@ -12,7 +12,9 @@
                             <span></span>
                         </span>
                     </button>
-                    <a href="#" class="button" title="Login">Login</a>
+                    <a href="#" class="button" title="Login">
+                        <span>Login</span>
+                    </a>
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@
                         :title="buttonTitle"
                         class="button"
                     >
-                        {{buttonText}}
+                        <span>{{buttonText}}</span>
                     </router-link>
                 </div>
 

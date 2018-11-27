@@ -1,5 +1,7 @@
 $button-color: $white;
 $button-background: $primary-colour;
+$button-hover-color: $primary-colour;
+$button-hover-background: $yellow;
 $button-border-width: 0.125rem;
 $button-border-radius: 1.25rem;
 $button-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -37,16 +39,15 @@ button {
 .button {
     @extend %button-base;
     color: $button-color;
-    background-color: transparent;
-    border: $button-border-width solid $button-background;
+    background-color: $button-background;
     transition: color $button-transition;
 
     &:hover, &:focus, &:active{
-        color: $button-background;
+        color: $button-hover-color;
 
         &::after {
-            transform: scale(0, 1);
-            transform-origin: right center;
+            transform: scale(1, 1);
+            transform-origin: left center;
         }
     }
 
@@ -57,11 +58,11 @@ button {
         left: -$button-border-width;
         right: -$button-border-width;
         bottom: -$button-border-width;
-        transform: scale(1, 1);
-        transform-origin: left center;
+        transform: scale(0, 1);
+        transform-origin: right center;
         transition: transform $button-transition;
-        background-color: $button-background;
-        z-index: $background-layer;
+        background-color: $button-hover-background;
+        z-index: $base-layer;
     }
 
     span {
