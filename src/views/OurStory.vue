@@ -7,16 +7,13 @@
             buttonLink="/"
             buttonText="Sign Up For Free"
             buttonTitle="Sign Up For Free"
-            :pageNavigation="pageNavigation"
             imageSrc="our-story-hero-cactus.png"
             imageAlt="Hero Image"
         />
         <FastFacts
-            :id="pageNavigation[0].anchor"
             :facts="facts"
         />
         <Team
-            :id="pageNavigation[1].anchor"
             title="The Leadership Team"
             sectionTitle="Get to know the people behind WhatsMy"
             :team="team"
@@ -50,16 +47,6 @@ export default {
   },
   data() {
     return {
-      pageNavigation: [
-        {
-          anchor: "fast-facts",
-          title: "Some Fast Facts"
-        },
-        {
-          anchor: "leadership-team",
-          title: "The Leadership Team"
-        }
-      ],
       facts: [
         {
           title: "Origin",

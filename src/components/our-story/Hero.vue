@@ -3,36 +3,19 @@
         <div class="container">
             <div class="hero-content">
                 <div class="content-container">
-                    <div class="content">
-                        <h1>
-                            <span>{{titleTop}}</span>
-                            <span>{{titleBottom}}</span>
-                        </h1>
-                        <p class="leadText">{{content}}</p>
-                        <router-link
-                            exact
-                            :to="buttonLink"
-                            :title="buttonTitle"
-                            class="button"
-                        >
-                            {{buttonText}}
-                        </router-link>
-                    </div>
-
-                    <nav class="page-navigation">
-                        <ul>
-                            <li
-                                v-for="navItem in pageNavigation"
-                                :key="navItem.anchor"
-                            >
-                                <a
-                                    :href="`#${navItem.anchor}`"
-                                    :title="navItem.title"
-                                    class="line-hover"
-                                >{{navItem.title}}</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <h1>
+                        <span>{{titleTop}}</span>
+                        <span>{{titleBottom}}</span>
+                    </h1>
+                    <p class="leadText">{{content}}</p>
+                    <router-link
+                        exact
+                        :to="buttonLink"
+                        :title="buttonTitle"
+                        class="button"
+                    >
+                        {{buttonText}}
+                    </router-link>
                 </div>
 
                 <div class="image-container">
@@ -73,10 +56,6 @@ export default {
     },
     buttonTitle: {
       type: String,
-      required: true
-    },
-    pageNavigation: {
-      type: Array,
       required: true
     },
     imageSrc: {
