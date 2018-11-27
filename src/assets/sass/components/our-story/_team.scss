@@ -104,6 +104,14 @@ $team-max-width: 50%;
             }
         }
 
+        &:hover {
+            .content-container {
+                h4 {
+                    transform: translateZ(2rem);
+                }
+            }
+        }
+
         .image-container {
             position: relative;
 
@@ -181,6 +189,7 @@ $team-max-width: 50%;
                 line-height: 2.5rem;
                 word-spacing: 50rem;
                 margin-bottom: 0.5rem;
+                transition: transform 0.5s ease;
 
                 @media screen and (min-width: $laptop-breakpoint){
                     font-size: 3.5rem;

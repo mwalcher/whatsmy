@@ -12,6 +12,7 @@
                     v-for="(leader, index) in team"
                     :key="index"
                     class="team-card"
+                    data-tilt
                 >
                     <div class="image-container">
                         <img
@@ -41,6 +42,8 @@
 </template>
 
 <script>
+import VanillaTilt from "vanilla-tilt";
+
 export default {
   name: "Team",
   props: {
@@ -56,6 +59,18 @@ export default {
       type: Array,
       required: true
     }
+  },
+  mounted() {
+    const tiltElements = document.querySelectorAll("[data-tilt]");
+    const options = {
+      max: 10,
+      glare: false
+    };
+    tiltElements.forEach(element => VanillaTilt.init(element, options));
+  },
+  destroyed() {
+    const tiltElements = document.querySelectorAll("[data-tilt]");
+    tiltElements.forEach(element => element.vanillaTilt.destroy());
   }
 };
 </script>
