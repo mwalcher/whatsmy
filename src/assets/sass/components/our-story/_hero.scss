@@ -4,7 +4,7 @@ $our-story-gradient-space: 3.5rem;
     .hero-content {
         @media screen and (min-width: $tablet-breakpoint){
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: space-between;
         }
 
@@ -16,8 +16,8 @@ $our-story-gradient-space: 3.5rem;
             @media screen and (min-width: $tablet-breakpoint){
                 max-width: 23.5rem;
                 text-align: left;
-                padding-top: 4.125rem;
-                padding-bottom: 6.25rem;
+                padding-top: 0;
+                padding-bottom: $our-story-gradient-space;
                 padding-right: 2rem;
             }
 
