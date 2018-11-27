@@ -52,10 +52,7 @@ $offset-bottom: 2.25rem;
         }
 
         .image-container {
-            max-width: 13.125rem;
-
             @media screen and (min-width: $tablet-breakpoint){
-                max-width: 100%;
                 background-image: url('./assets/images/stripe-accent.png');
                 background-repeat: no-repeat;
                 background-size: 6.875rem;
