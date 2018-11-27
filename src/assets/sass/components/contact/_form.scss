@@ -32,7 +32,7 @@ $checkbox-grid-gutter: 1.125rem;
             &:checked {
                 & + label {
                     &::before {
-                        background-color: $primary-colour;
+                        background-color: $yellow;
                     }
                 }
             }
