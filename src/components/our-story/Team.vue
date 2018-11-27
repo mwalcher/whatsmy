@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="content-container">
-                        <h4 class="h1">{{leader.name}}</h4>
+                        <h4>{{leader.name}}</h4>
                         <p class="content">{{leader.content}}</p>
                     </div>
                 </div>

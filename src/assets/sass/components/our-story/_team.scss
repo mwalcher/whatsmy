@@ -1,6 +1,5 @@
-$team-image-size: 22rem;
 $team-gutter-size: 1.5rem;
-$team-max-width: 25rem + $team-gutter-size;
+$team-max-width: 50%;
 
 .team {
     padding-top: $mobile-section-space;
@@ -64,8 +63,7 @@ $team-max-width: 25rem + $team-gutter-size;
     .team-title {
         .title-container {
             @media screen and (min-width: $tablet-breakpoint){
-                max-width: $team-image-size;
-                margin-left: auto;
+                margin-left: $team-gutter-size * 2;
             }
 
             .subtitle {
@@ -81,14 +79,11 @@ $team-max-width: 25rem + $team-gutter-size;
     }
 
     .team-card {
-        max-width: $team-max-width;
-        @include spacing(margin, left right, auto);
         padding-top: $mobile-block-space;
 
         @media screen and (min-width: $tablet-breakpoint){
             padding-top: 0;
-            @include spacing(margin, left right, 0);
-            padding-bottom: 4.375rem;
+            padding-bottom: 8.75rem;
         }
 
         &:nth-child(2) {
@@ -111,8 +106,10 @@ $team-max-width: 25rem + $team-gutter-size;
 
         .image-container {
             position: relative;
-            max-width: $team-image-size;
-            margin-left: auto;
+
+            @media screen and (min-width: $phone-breakpoint){
+                margin-left: $team-gutter-size * 2;
+            }
 
             .image-flag {
                 display: flex;
@@ -168,19 +165,27 @@ $team-max-width: 25rem + $team-gutter-size;
         }
 
         .content-container {
-            padding-top: 1rem;
+            position: relative;
+            top: -1rem;
+            margin-bottom: -1rem;
 
-            @media screen and (min-width: $phone-breakpoint){
-                position: relative;
+            @media screen and (min-width: $laptop-breakpoint){
                 top: -2.75rem;
                 margin-bottom: -2.75rem;
-                padding-top: 0;
             }
 
             h4 {
                 color: $red;
-                word-spacing: $team-max-width;
+                @include set-font(primary, bold);
+                font-size: 2rem;
+                line-height: 2.5rem;
+                word-spacing: 50rem;
                 margin-bottom: 0.5rem;
+
+                @media screen and (min-width: $laptop-breakpoint){
+                    font-size: 3.5rem;
+                    line-height: 4rem;
+                }
             }
 
             .content {
