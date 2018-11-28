@@ -94,11 +94,7 @@ $feature-gutter: 0.625rem;
             height: 52.5rem;
 
             @media screen and (min-width: $laptop-breakpoint){
-                height: 45.5rem;
-            }
-
-            @media screen and (min-width: $desktop-breakpoint){
-                height: 40rem;
+                height: 45rem;
             }
         }
     }
