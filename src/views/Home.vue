@@ -33,6 +33,10 @@
 </template>
 
 <script>
+import Rellax from "rellax";
+let rellax;
+const rellaxOptions = {};
+
 import Page from "@/components/layout/Page.vue";
 import Hero from "@/components/home/Hero.vue";
 import LeadContent from "@/components/home/LeadContent.vue";
@@ -95,6 +99,12 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    rellax = new Rellax(".rellax", rellaxOptions);
+  },
+  destroyed() {
+    rellax.destroy();
   }
 };
 </script>

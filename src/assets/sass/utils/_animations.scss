@@ -2,6 +2,12 @@
     transform-style: preserve-3d;
 }
 
+.rellax {
+    @media screen and (max-width: $tablet-breakpoint - 0.0625rem){
+        transform: none !important;
+    }
+}
+
 @keyframes animateIn {
     from {
         transform: translateY(-2rem);

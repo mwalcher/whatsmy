@@ -98,4 +98,20 @@ $feature-gutter: 0.625rem;
             }
         }
     }
+
+    .bar-detail {
+        display: none;
+
+        @media screen and (min-width: $tablet-breakpoint){
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: -1rem;
+            width: 4.875rem;
+            height: 12.5rem;
+            background-image: url('./assets/images/line-accent.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
 }

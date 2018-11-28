@@ -17,7 +17,7 @@
                     </router-link>
                 </div>
 
-                <div class="image-container rellax" data-rellax-speed="2">
+                <div class="image-container rellax" data-rellax-speed="3">
                     <img
                         :src="require(`@/assets/images/${imageSrc}`)"
                         :alt="imageAlt"
@@ -31,9 +31,6 @@
 </template>
 
 <script>
-import Rellax from "rellax";
-let rellax;
-
 export default {
   name: "HomeHero",
   props: {
@@ -65,12 +62,6 @@ export default {
       type: String,
       required: true
     }
-  },
-  mounted() {
-    rellax = new Rellax(".rellax");
-  },
-  destroyed() {
-    rellax.destroy();
   }
 };
 </script>
