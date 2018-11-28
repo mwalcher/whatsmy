@@ -186,14 +186,13 @@ $team-max-width: 48%;
                 color: $pink;
                 @include set-font(primary, bold);
                 font-size: 2rem;
-                line-height: 2.5rem;
+                line-height: 1;
                 word-spacing: 50rem;
                 margin-bottom: 0.5rem;
                 transition: transform 0.5s ease;
 
                 @media screen and (min-width: $laptop-breakpoint){
                     font-size: 3rem;
-                    line-height: 1;
                 }
             }
 
