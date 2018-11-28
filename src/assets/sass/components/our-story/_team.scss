@@ -1,5 +1,5 @@
 $team-gutter-size: 1.5rem;
-$team-max-width: 50%;
+$team-max-width: 48%;
 
 .team {
     padding-top: $mobile-section-space;
@@ -53,7 +53,7 @@ $team-max-width: 50%;
 
     .team-card, .team-title {
         @media screen and (min-width: $tablet-breakpoint){
-            flex: 0 1 50%;
+            flex: 0 1 $team-max-width;
             max-width: $team-max-width;
             padding-left: $team-gutter-size;
             padding-right: $team-gutter-size;
@@ -183,7 +183,7 @@ $team-max-width: 50%;
             }
 
             h4 {
-                color: $red;
+                color: $pink;
                 @include set-font(primary, bold);
                 font-size: 2rem;
                 line-height: 2.5rem;
@@ -192,8 +192,8 @@ $team-max-width: 50%;
                 transition: transform 0.5s ease;
 
                 @media screen and (min-width: $laptop-breakpoint){
-                    font-size: 3.5rem;
-                    line-height: 4rem;
+                    font-size: 3rem;
+                    line-height: 1;
                 }
             }
 
