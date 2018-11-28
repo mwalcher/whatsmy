@@ -23,6 +23,18 @@ main.contact {
             padding-bottom: 8.875rem;
         }
 
+        h1 {
+            max-width: 18rem;
+
+            @media screen and (min-width: $tablet-breakpoint){
+                max-width: 100%;
+            }
+
+            @media screen and (min-width: $desktop-breakpoint){
+                max-width: 28.75rem;
+            }
+        }
+
         .image-container {
             display: none;
 
