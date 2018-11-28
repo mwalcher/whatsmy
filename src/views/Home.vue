@@ -10,7 +10,7 @@
             imageAlt="Hero Image"
         />
         <LeadContent
-            text="WhatsMy makes staying on top of your home and vehicle values easy. You paid for the, you should know what they are worth. Sign up to get FREE monthly updates."
+            text="WhatsMy makes staying on top of your home and vehicle values easy. You paid for them, you should know what they are worth. Sign up to get FREE monthly updates."
         />
         <UseCase
             title="Use Cases"
