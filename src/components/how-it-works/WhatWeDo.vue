@@ -20,7 +20,7 @@
 
                 <div class="content-container">
                     <h2 class="subtitle">{{title}}</h2>
-                    <h3 class="h2">{{sectionTitle}}</h3>
+                    <h3>{{sectionTitle}}</h3>
                     <p>{{content}}</p>
                 </div>
             </div>

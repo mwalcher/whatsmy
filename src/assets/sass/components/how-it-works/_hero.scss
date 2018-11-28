@@ -1,10 +1,14 @@
 $how-it-works-gradient-space: 3.5rem;
 
 .hero {
+    @media screen and (min-width: $laptop-breakpoint){
+        margin-bottom: -$how-it-works-gradient-space;
+    }
+
     .hero-content {
         @media screen and (min-width: $tablet-breakpoint){
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: space-between;
         }
 
@@ -16,8 +20,8 @@ $how-it-works-gradient-space: 3.5rem;
             @media screen and (min-width: $tablet-breakpoint){
                 max-width: 23.5rem;
                 text-align: left;
-                padding-top: 4.125rem;
-                padding-bottom: 6.25rem;
+                padding-top: 0;
+                padding-bottom: $how-it-works-gradient-space;
                 padding-right: 2rem;
             }
 
@@ -43,6 +47,7 @@ $how-it-works-gradient-space: 3.5rem;
             max-width: calc(50% + (((100vw - #{$tablet-container}) / 2) + #{$container-gutter}));
             margin-right: calc(-1 * (((100vw - #{$tablet-container}) / 2) + #{$container-gutter}));
             padding-left: $how-it-works-gradient-space;
+            padding-bottom: $how-it-works-gradient-space;
         }
 
         @media screen and (min-width: $laptop-breakpoint){
@@ -78,7 +83,7 @@ $how-it-works-gradient-space: 3.5rem;
         @media screen and (min-width: $tablet-breakpoint){
             display: block;
             position: absolute;
-            bottom: -$how-it-works-gradient-space;
+            bottom: 0;
             right: 0;
             width: 100%;
             height: 15.875rem;
