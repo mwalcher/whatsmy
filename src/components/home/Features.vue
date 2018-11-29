@@ -4,7 +4,7 @@
             <div class="content-container">
                 <h2 class="subtitle">{{title}}</h2>
                 <h3 class="h2">{{sectionTitle}}</h3>
-                <ul class="feature-list rellax" data-rellax-speed="3" data-rellax-percentage="1.125">
+                <ul class="feature-list">
                     <li
                         v-for="(feature, index) in features"
                         :key="index"
@@ -16,13 +16,13 @@
                 </ul>
             </div>
         </div>
-        <div class="image-container rellax" data-rellax-speed="1" data-rellax-percentage="0.5">
+        <div class="image-container">
             <img
                 :src="require(`@/assets/images/${imageSrc}`)"
                 :alt="imageAlt"
             />
         </div>
-        <div class="bar-detail rellax" data-rellax-speed="2" data-rellax-percentage="0.5"/>
+        <div class="bar-detail"/>
     </section>
 </template>
 

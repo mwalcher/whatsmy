@@ -35,7 +35,6 @@
 <script>
 import Rellax from "rellax";
 let rellax;
-const rellaxOptions = {};
 
 import Page from "@/components/layout/Page.vue";
 import Hero from "@/components/home/Hero.vue";
@@ -101,7 +100,7 @@ export default {
     };
   },
   mounted() {
-    rellax = new Rellax(".rellax", rellaxOptions);
+    rellax = new Rellax(".rellax");
   },
   destroyed() {
     rellax.destroy();
