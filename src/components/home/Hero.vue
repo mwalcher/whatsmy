@@ -17,10 +17,12 @@
                     </router-link>
                 </div>
 
-                <div class="image-container rellax" data-rellax-speed="3">
+                <div class="image-container">
                     <img
                         :src="require(`@/assets/images/${imageSrc}`)"
                         :alt="imageAlt"
+                        class="rellax"
+                        data-rellax-speed="3"
                     />
                 </div>
 

@@ -40,6 +40,9 @@
 </template>
 
 <script>
+import Rellax from "rellax";
+let rellax;
+
 import Page from "@/components/layout/Page.vue";
 import Hero from "@/components/how-it-works/Hero.vue";
 import Partners from "@/components/how-it-works/Partners.vue";
@@ -88,6 +91,12 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    rellax = new Rellax(".rellax");
+  },
+  destroyed() {
+    rellax.destroy();
   }
 };
 </script>

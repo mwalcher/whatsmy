@@ -30,6 +30,9 @@
 </template>
 
 <script>
+import Rellax from "rellax";
+let rellax;
+
 import Page from "@/components/layout/Page.vue";
 import Hero from "@/components/our-story/Hero.vue";
 import FastFacts from "@/components/our-story/FastFacts.vue";
@@ -112,6 +115,12 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    rellax = new Rellax(".rellax");
+  },
+  destroyed() {
+    rellax.destroy();
   }
 };
 </script>

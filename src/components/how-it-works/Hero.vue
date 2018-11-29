@@ -22,8 +22,10 @@
                     <img
                         :src="require(`@/assets/images/${imageSrc}`)"
                         :alt="imageAlt"
+                        class="rellax"
+                        data-rellax-speed="3"
                     />
-                    <div class="hero-gradient"/>
+                    <div class="hero-gradient rellax" data-rellax-speed="1"/>
                 </div>
             </div>
         </div>
