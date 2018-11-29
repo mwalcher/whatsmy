@@ -17,6 +17,7 @@
     "@vue/cli-plugin-eslint": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
     "@vue/eslint-config-prettier": "^3.0.4",
+    "aos": "^2.3.4",
     "node-sass": "^4.9.0",
     "rellax": "^1.7.1",
     "sass-loader": "^7.0.1",

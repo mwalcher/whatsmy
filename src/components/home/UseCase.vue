@@ -5,6 +5,9 @@
                 v-for="(option, index) in options"
                 :key="index"
                 class="use-case-option"
+                data-aos="fade-up"
+                data-aos-offset="150"
+                data-aos-mirror="true"
             >
                 <div class="desktop-image image-container">
                     <img

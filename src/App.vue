@@ -7,6 +7,9 @@
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default {
   name: "app"
 };
@@ -18,6 +21,7 @@ const scrollOptions = {
 
 // eslint-disable-next-line
 new SmoothScroll('a[href*="#"]', scrollOptions);
+AOS.init();
 </script>
 
 <style lang="scss">

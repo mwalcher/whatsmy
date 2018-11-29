@@ -4,7 +4,12 @@
             <div class="content-container">
                 <h2 class="subtitle">{{title}}</h2>
                 <h3 class="h2">{{sectionTitle}}</h3>
-                <ul class="feature-list">
+                <ul
+                    class="feature-list"
+                    data-aos="fade-up"
+                    data-aos-offset="150"
+                    data-aos-mirror="true"
+                >
                     <li
                         v-for="(feature, index) in features"
                         :key="index"
