@@ -25,6 +25,7 @@
                         class="rellax"
                         data-rellax-speed="3"
                     />
+                    <div class="stripe-accent rellax" data-rellax-speed="5"/>
                     <div class="hero-gradient rellax" data-rellax-speed="1"/>
                 </div>
             </div>
