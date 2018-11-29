@@ -5,7 +5,12 @@
                 <h2 class="subtitle">{{title}}</h2>
                 <p class="leadText">{{content}}</p>
             </div>
-            <ul class="partner-list">
+            <ul
+                class="partner-list"
+                data-aos="fade-up"
+                data-aos-offset="150"
+                data-aos-mirror="true"
+            >
                 <li
                     v-for="(partner, index) in partners"
                     :key="index"

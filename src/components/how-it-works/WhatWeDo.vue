@@ -1,7 +1,12 @@
 <template>
     <section class="what-we-do">
         <div class="container">
-            <div class="what-we-do-content">
+            <div
+                class="what-we-do-content"
+                data-aos="fade-up"
+                data-aos-offset="150"
+                data-aos-mirror="true"
+            >
                 <div class="media-container">
                     <div class="back-image image-container">
                         <img

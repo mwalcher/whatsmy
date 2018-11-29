@@ -11,6 +11,10 @@
                     v-for="(step, index) in steps"
                     :key="index"
                     class="step"
+                    data-aos="fade-up"
+                    data-aos-offset="150"
+                    data-aos-mirror="true"
+                    :data-aos-delay="(250 * index)"
                 >
                     <span class="number">
                         <span v-if="(index + 1) < 10">0</span>

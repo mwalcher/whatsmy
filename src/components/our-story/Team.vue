@@ -13,6 +13,9 @@
                     :key="index"
                     class="team-card"
                     data-tilt
+                    data-aos="fade-up"
+                    data-aos-offset="150"
+                    data-aos-mirror="true"
                 >
                     <div class="image-container">
                         <img
