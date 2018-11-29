@@ -4,6 +4,7 @@ main.contact {
     padding-bottom: 2rem;
 
     @media screen and (min-width: $tablet-breakpoint){
+        position: relative;
         padding-bottom: 3.875rem;
     }
 
@@ -20,7 +21,26 @@ main.contact {
 
     .simple-hero {
         @media screen and (min-width: $tablet-breakpoint){
+            position: static;
             padding-bottom: 8.875rem;
+        }
+
+        &.imageFixed {
+            .image-container {
+                @media screen and (min-width: $tablet-breakpoint){
+                    position: fixed;
+                    top: $header-height;
+                }
+            }
+        }
+
+        &.imageBottom {
+            .image-container {
+                @media screen and (min-width: $tablet-breakpoint){
+                    top: auto;
+                    bottom: 3.75rem;
+                }
+            }
         }
 
         h1 {
