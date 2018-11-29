@@ -88,6 +88,10 @@ $team-max-width: 48%;
 
         &:nth-child(2) {
             @media screen and (min-width: $tablet-breakpoint){
+                margin-top: 8rem;
+            }
+
+            @media screen and (min-width: $laptop-breakpoint){
                 margin-top: 4.875rem;
             }
         }
