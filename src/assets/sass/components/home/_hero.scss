@@ -50,10 +50,12 @@
         }
 
         .image-container {
-            box-shadow: $image-box-shadow;
-
             @media screen and (min-width: $tablet-breakpoint){
                 flex: 1 1 40%;
+            }
+
+            img {
+                box-shadow: $image-box-shadow;
             }
         }
 

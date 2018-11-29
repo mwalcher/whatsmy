@@ -105,7 +105,7 @@ $feature-gutter: 0.625rem;
         @media screen and (min-width: $tablet-breakpoint){
             display: block;
             position: absolute;
-            top: 100%;
+            top: 5rem;
             left: -1rem;
             width: 4.875rem;
             height: 12.5rem;

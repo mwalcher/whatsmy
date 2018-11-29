@@ -25,9 +25,16 @@
             <img
                 :src="require(`@/assets/images/${imageSrc}`)"
                 :alt="imageAlt"
+                class="rellax"
+                data-rellax-speed="2"
+                data-rellax-percentage="0.5"
             />
         </div>
-        <div class="bar-detail"/>
+        <div
+            class="bar-detail rellax"
+            data-rellax-speed="3"
+            data-rellax-percentage="0.5"
+        />
     </section>
 </template>
 
