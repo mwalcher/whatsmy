@@ -12,6 +12,9 @@
                         <img
                             :src="require(`@/assets/images/${backImageSrc}`)"
                             :alt="backImageAlt"
+                            class="rellax"
+                            data-rellax-speed="1"
+                            data-rellax-percentage="0.5"
                         />
                     </div>
 
@@ -19,6 +22,14 @@
                         <img
                             :src="require(`@/assets/images/${frontImageSrc}`)"
                             :alt="frontImageAlt"
+                            class="rellax"
+                            data-rellax-speed="2"
+                            data-rellax-percentage="0.5"
+                        />
+                        <div
+                            class="bar-detail rellax"
+                            data-rellax-speed="3"
+                            data-rellax-percentage="0.5"
                         />
                     </div>
                 </div>

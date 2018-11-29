@@ -52,16 +52,22 @@
                     right: 0;
                     transform: translateY(-50%);
                     max-width: 80%;
-                    box-shadow: $image-box-shadow;
                 }
 
-                &::after {
+                img {
                     @media screen and (min-width: $tablet-breakpoint){
-                        content: '';
+                        box-shadow: $image-box-shadow;
+                    }
+                }
+
+                .bar-detail {
+                    display: none;
+
+                    @media screen and (min-width: $tablet-breakpoint){
+                        display: block;
                         position: absolute;
-                        top: 1.25rem;
-                        left: 50%;
-                        transform: translate(-50%, -100%);
+                        top: calc(1.25rem - 12.5rem);
+                        left: calc(50% - (4.875rem / 2));
                         width: 4.875rem;
                         height: 12.5rem;
                         background-image: url('./assets/images/line-accent.png');
