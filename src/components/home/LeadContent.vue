@@ -1,7 +1,12 @@
 <template>
     <section class="lead-content">
         <div class="container">
-            <div class="content-container">
+            <div
+                class="content-container"
+                data-aos="line-animation"
+                data-aos-offset="150"
+                data-aos-mirror="true"
+            >
                 <p class="leadText">{{text}}</p>
             </div>
         </div>

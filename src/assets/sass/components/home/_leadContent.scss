@@ -8,9 +8,20 @@
 
     .content-container {
         @media screen and (min-width: $tablet-breakpoint){
+            position: relative;
             @include spacing(padding, top bottom, 6.25rem);
             @include spacing(padding, left right, $container-gutter);
-            border-left: 1px solid $grey;
+        }
+
+        &::before {
+            @media screen and (min-width: $tablet-breakpoint){
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                border-left: 1px solid $grey;
+            }
         }
 
         p {

@@ -8,6 +8,22 @@
     }
 }
 
+[data-aos="line-animation"] {
+    &.aos-animate {
+        &::before {
+            transform: scale(1, 1);
+        }
+    }
+
+    &::before {
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition-property: transform;
+        transition-duration: 0.4s;
+        transition-timing-function: ease;
+    }
+}
+
 @keyframes animateIn {
     from {
         transform: translateY(-2rem);

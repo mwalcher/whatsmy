@@ -1,6 +1,11 @@
 <template>
     <section class="partners">
-        <div class="container">
+        <div
+            class="container"
+            data-aos="line-animation"
+            data-aos-offset="150"
+            data-aos-mirror="true"
+        >
             <div class="content-container">
                 <h2 class="subtitle">{{title}}</h2>
                 <p class="leadText">{{content}}</p>
