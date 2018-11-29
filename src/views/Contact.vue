@@ -10,7 +10,6 @@
                     buttonTitle="Get Started"
                     imageSrc="birds.png"
                     imageAlt="Birds Hero Image"
-                    :class="{imageFixed, imageBottom}"
                 />
                 <ContactForm/>
             </div>
@@ -29,41 +28,6 @@ export default {
     Page,
     SimpleHero,
     ContactForm
-  },
-  data() {
-    return {
-      imageFixed: false,
-      imageBottom: false
-    };
-  },
-  methods: {
-    fixedImage: function() {
-      const page = document.querySelector(".page-content");
-      const heroImage = document.querySelector(".simple-hero .image-container");
-      const header = document.querySelector("header");
-      const offset = header.offsetHeight;
-
-      const pagePosition = page.getBoundingClientRect();
-      const pageTop = pagePosition.top - (offset + 60);
-      const pageBottom = pagePosition.bottom - (offset + 100);
-      const heroImageHeight = heroImage.offsetHeight;
-
-      if (pageTop <= 0 && pageBottom >= heroImageHeight) {
-        this.imageBottom = false;
-        this.imageFixed = true;
-      } else if (pageTop <= 0 && pageBottom < heroImageHeight) {
-        this.imageFixed = false;
-        this.imageBottom = true;
-      } else {
-        this.imageFixed = false;
-      }
-    }
-  },
-  created() {
-    window.addEventListener("scroll", this.fixedImage);
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.fixedImage);
   }
 };
 </script>
